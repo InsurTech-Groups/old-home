@@ -16,7 +16,6 @@ export default function App() {
   const date = moment().format();
   const uA = navigator.userAgent;
 
-  console.log(date)
 
   const [postData, setPostData2] = useState({
   
@@ -72,18 +71,18 @@ export default function App() {
 
   });
 
-  useEffect(() => {
-    const stringifiedData = sessionStorage.getItem("main-form-data");
+  // useEffect(() => {
+  //   const stringifiedData = sessionStorage.getItem("main-form-data");
 
-    if (stringifiedData) {
-      const jsonData = JSON.parse(stringifiedData);
-      setPostData(jsonData);
-    }
-  }, []);
+  //   if (stringifiedData) {
+  //     const jsonData = JSON.parse(stringifiedData);
+  //     setPostData(jsonData);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    sessionStorage.setItem("main-form-data", JSON.stringify(postData));
-  }, [JSON.stringify(postData)]);
+  // useEffect(() => {
+  //   sessionStorage.setItem("main-form-data", JSON.stringify(postData));
+  // }, [JSON.stringify(postData)]);
 
   const setPostData = (obj) => {
     console.log("in app state", postData);

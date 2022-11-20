@@ -4,6 +4,7 @@ import LandingHeaderPic from "../assets/homeLanding.jpg";
 import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
 import ZipCode from '../apis/zipCode'
 import FAQ from "../components/faq";
+import FadeIn from 'react-fade-in';
 
 function LandingPage({postData}) {
 
@@ -32,6 +33,7 @@ function LandingPage({postData}) {
 
   return (
     <div>
+      <FadeIn>
       <main className="lg:relative bg-dark-purple">
         <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
@@ -76,7 +78,8 @@ function LandingPage({postData}) {
         </dl>
       </div>
       </div>
-      <FAQ/>
+        <FAQ />
+        </FadeIn>
     </div>
   );
 }

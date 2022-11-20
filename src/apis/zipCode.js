@@ -96,9 +96,8 @@ function ZipCode({postData}) {
 
     
       postData({
-        ...postData,
         contact: {
-          zip: zipCodeValue,
+          zip_code: zipCodeValue,
           state: stateValue,
           city: cityValue,
         }
