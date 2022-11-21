@@ -94,14 +94,8 @@ function ZipCode({postData}) {
     }
     else {
 
-    
-      postData({
-        contact: {
-          zip_code: zipCodeValue,
-          state: stateValue,
-          city: cityValue,
-        }
-      })
+
+     
 
  
       navigate('/insurance-status');

@@ -8,7 +8,7 @@ import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
 
 
-function TypeOfHome({postData}) {
+function TypeOfHome({postData, sendData}) {
 
   const navigate = useNavigate();
 
@@ -28,10 +28,8 @@ function TypeOfHome({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    console.log('value is', v)
 
     navigate('/ownership')
-    
   }
   
   return (

@@ -26,7 +26,7 @@ function Ownership({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    navigate('/')
+   //navigate('/')
     
 
   }

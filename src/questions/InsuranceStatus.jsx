@@ -23,22 +23,7 @@ function InsuranceStatus({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    // if (v === 'Yes') {
-    //   navigate('/current-insurance')
-      
-    // }
-    // else {
-    //   //Post data for no insurance goes here
-    //   navigate('/')
-    // }
-
     v === 'Yes' ? navigate('/current-insurance') : navigate('/home-type')
-   
-
-
-
-    
-
   }
   
   return (

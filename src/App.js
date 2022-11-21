@@ -21,17 +21,17 @@ export default function App() {
 
   const [postData, setPostData2] = useState({
   
-    meta: {
+    
       originally_created: date,
       lead_id_code: "4xyz78b9-0cdc-43a7-98ea-2b680a5313a2",
       trusted_form_cert_url: "https://cert.trustedform.com/f886071...",
       user_agent: uA,
       landing_page_url: "https://www.home.insurtechgroups.com",
       tcpa_compliant: true,
-      tcpa_consent_text: "I agree to receive to be contacted by phone or email."
-    },
+      tcpa_consent_text: "I agree to receive to be contacted by phone or email.",
+   
 
-    contact: {
+  
       first_name: "",
       last_name: "",
       email: "",
@@ -40,34 +40,32 @@ export default function App() {
       city: "",
       state: "",
       zip_code: "",
-      ip_address: ""
-    },
+      ip_address: "",
+   
 
-    data: {
+   
       birth_date: "",
       gender: "",
       marital_status: "",
-      properties: [
-        {
+      
           property_type: "",
           ownership: "",
           occupancy: "",
-        }
-      ],
+       
 
-      requested_policy: {
+    
         coverage_type: "",
         liability: "",
         deductible: "",
-        replacement_cost:""
-      },
+        replacement_cost:"",
+   
       
-      current_policy: {
+  
         insurance_company: "",
         expiration_date: "",
         coverage_type: "",
-      }
-    }
+
+    
 
   });
 
@@ -139,7 +137,7 @@ export default function App() {
           path='/expired-insurance'
           element={
             <ExpiredInsurance
-              postData={setPostDataForPage.current_policy}
+              postData={setPostDataForPage}
             />
           }
         />
@@ -149,6 +147,7 @@ export default function App() {
           element={
             <TypeOfHome
               postData={setPostDataForPage}
+              sendData={postData}
             />
           }
         />

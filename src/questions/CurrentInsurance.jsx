@@ -32,10 +32,6 @@ function CurrentInsurance({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    
-
-    console.log('click')
-
     navigate('/expired-insurance')
 
     
