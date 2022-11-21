@@ -7,14 +7,17 @@ import CTA from "../components/CTA";
 import {LinkWithQuery} from '../components/BackButton'
 import FadeIn from 'react-fade-in';
 
-function InsuranceStatus({postData}) {
+function Ownership({postData}) {
 
   const navigate = useNavigate();
 
+  //get value of property type from props passed
+
 
   let buttons = [
-		{title: 'Yes', id: 'Yes', value: 'Yes', key: 'Yes'},
-    {title: 'No', id: 'No', value: 'No', key: 'No'},
+		{title: 'Own', id: 'Own', value: 'Own', key: 'Own'},
+    { title: 'Rent', id: 'Rent', value: 'Rent', key: 'Rent' },
+    {title: 'Financing', id: 'Financing', value: 'Financing', key: 'Financing'},
 	
   ]
   
@@ -23,20 +26,7 @@ function InsuranceStatus({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    // if (v === 'Yes') {
-    //   navigate('/current-insurance')
-      
-    // }
-    // else {
-    //   //Post data for no insurance goes here
-    //   navigate('/')
-    // }
-
-    v === 'Yes' ? navigate('/current-insurance') : navigate('/home-type')
-   
-
-
-
+    navigate('/')
     
 
   }
@@ -53,7 +43,7 @@ function InsuranceStatus({postData}) {
       <div className="w-1/2 space-y-8">
         <div>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
-              Do you have an existing <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">insurance policy </span> for your property?
+              Do you <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">own or rent </span>?
 
             </h2>
             
@@ -95,4 +85,4 @@ function InsuranceStatus({postData}) {
 
 }
 
-export default InsuranceStatus;
+export default Ownership;

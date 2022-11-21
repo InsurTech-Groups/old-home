@@ -8,6 +8,8 @@ import LandingPage from "./pages/LandingPage";
 import InsuranceStatus from "./questions/InsuranceStatus";
 import CurrentInsurance from './questions/CurrentInsurance';
 import ExpiredInsurance from "./questions/ExpiredInsurance";
+import TypeOfHome from "./questions/TypeOfHome";
+import Ownership from "./questions/Ownership";
 
 export default function App() {
 
@@ -47,11 +49,9 @@ export default function App() {
       marital_status: "",
       properties: [
         {
-          // TODO: add any home information we are grabbing here
           property_type: "",
           ownership: "",
           occupancy: "",
-
         }
       ],
 
@@ -97,6 +97,8 @@ export default function App() {
 
   };
 
+  
+
 
 
   return (
@@ -137,6 +139,24 @@ export default function App() {
           path='/expired-insurance'
           element={
             <ExpiredInsurance
+              postData={setPostDataForPage.current_policy}
+            />
+          }
+        />
+
+<Route
+          path='/home-type'
+          element={
+            <TypeOfHome
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/ownership'
+          element={
+            <Ownership
               postData={setPostDataForPage}
             />
           }

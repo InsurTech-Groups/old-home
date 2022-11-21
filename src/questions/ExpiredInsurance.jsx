@@ -21,21 +21,13 @@ function ExpiredInsurance({postData}) {
 
 
   const nextStep = (e) => {
+
     e.preventDefault();
     
-    console.log(exp)
-    postData({
+    exp = document.getElementById('expires').value;
 
-      data: {
-        current_policy: {
-          expiration_date: exp
-        }
-      }
-      
-    }) 
-
-    console.log('real', postData.data)
-
+    console.log('click')
+    navigate('/home-type')
   
   };
 
@@ -171,7 +163,7 @@ function ExpiredInsurance({postData}) {
               <button
             type="submit"
             disabled={isButtonDisabled}
-            className={`px-6 py-4 w-sm ripple-bg-blue-200  mt-5 text-lg bg-pink-600 ${isButtonDisabled ? 'cursor-not-allowed disabled:opacity-75  bg-input-purple' : ""} hover:shadow-lg text-white rounded transition duration-200`}
+            className={`px-6 py-4 max-w-xl  mt-5 text-lg bg-pink-600 ${isButtonDisabled ? 'cursor-not-allowed disabled:opacity-75  bg-input-purple' : ""} hover:shadow-lg text-white rounded transition duration-200`}
             id="zipCodeButton"
             onClick={nextStep}>
             Next

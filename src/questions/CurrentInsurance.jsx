@@ -32,13 +32,9 @@ function CurrentInsurance({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    postData({
-      data: {
-        current_policy: {
-          insurance_company: v
-        }
-      }
-    });
+    
+
+    console.log('click')
 
     navigate('/expired-insurance')
 
@@ -66,7 +62,7 @@ function CurrentInsurance({postData}) {
 
 
           
-        <div className=" lg:w-full md:w-full sm:min-w-ful mx-auto justify-center grid grid-rows-2 grid-flow-col gap-4">
+        <div className="flex flex-wrap justify-center">
         {buttons.map((button) => {
                 
                 return (
