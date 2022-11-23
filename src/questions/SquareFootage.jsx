@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { toast } from "react-toastify";
 
 
 function SquareFootage({ postData }) {
@@ -17,12 +18,32 @@ function SquareFootage({ postData }) {
   
   const nextStep = (e) => {
     
+    if(isButtonDisabled) {
+      toast.error('Please select an option')
+      return
+    }
+   
+    else {
+      navigate('/gender')
+    }
+  }
+
+  const handleInputChange = (e) => {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    navigate('/expired-insurance')
+    let sqft = parseInt(v);
 
-    
+    if (sqft < 100) {
+      toast.error("Please enter a valid square footage");
+    }
+    if (isNaN(sqft)) {
+      toast.error("Please enter a valid square footage");
+    }
+    else {
+      setIsButtonDisabled(false)
+
+    }
   }
   
   return (
@@ -57,7 +78,7 @@ function SquareFootage({ postData }) {
                     required
                     pattern="\d*"
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
-                   
+                   onChange={handleInputChange}
                           />
 
               </div>

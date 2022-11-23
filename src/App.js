@@ -13,6 +13,9 @@ import Ownership from "./questions/Ownership";
 import BedRooms from "./questions/Bedrooms";
 import YearBuilt from "./questions/YearBuilt";
 import SquareFootage from "./questions/SquareFootage";
+import Gender from "./questions/Gender";
+import DOB from './questions/DOB';
+import Address from "./questions/Address";
 
 export default function App() {
 
@@ -190,6 +193,33 @@ export default function App() {
           }
         />
 
+<Route
+          path='/gender'
+          element={
+            <Gender
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/dob'
+          element={
+            <DOB
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+        
+<Route
+          path='/address'
+          element={
+            <Address
+              postData={setPostDataForPage}
+            />
+          }
+        />
       </Routes>
       <Footer/>
     </div>
