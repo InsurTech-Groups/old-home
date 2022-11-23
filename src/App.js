@@ -10,6 +10,9 @@ import CurrentInsurance from './questions/CurrentInsurance';
 import ExpiredInsurance from "./questions/ExpiredInsurance";
 import TypeOfHome from "./questions/TypeOfHome";
 import Ownership from "./questions/Ownership";
+import BedRooms from "./questions/Bedrooms";
+import YearBuilt from "./questions/YearBuilt";
+import SquareFootage from "./questions/SquareFootage";
 
 export default function App() {
 
@@ -161,6 +164,31 @@ export default function App() {
           }
         />
         
+        <Route
+          path='/bedrooms'
+          element={
+            <BedRooms
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/year-built'
+          element={
+            <YearBuilt
+              postData={setPostDataForPage}
+            />
+          }
+        />
+        <Route
+          path='/square-footage'
+          element={
+            <SquareFootage
+              postData={setPostDataForPage}
+            />
+          }
+        />
 
       </Routes>
       <Footer/>
