@@ -55,7 +55,7 @@ function SquareFootage({ postData }) {
                             id="expires"
                             placeholder="500"
                     required
-                    pattern="/d*"
+                    pattern="\d*"
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
                           />
