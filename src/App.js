@@ -16,7 +16,11 @@ import SquareFootage from "./questions/SquareFootage";
 import Gender from "./questions/Gender";
 import DOB from './questions/DOB';
 import Address from "./questions/Address";
-import Claims from './questions/Claims'
+import Claims from './questions/Claims';
+import CreditScore from "./questions/CreditScore";
+import Name from './questions/Name';
+import EmailPhone from "./questions/EmailPhone";
+import ThankYou from './questions/ThankYou'
 
 export default function App() {
 
@@ -230,6 +234,42 @@ export default function App() {
             />
           }
         />
+<Route
+          path='/credit'
+          element={
+            <CreditScore
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/name'
+          element={
+            <Name
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/email-phone'
+          element={
+            <EmailPhone
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/thank-you'
+          element={
+            <ThankYou
+              postData={setPostDataForPage}
+            />
+          }
+        />
+        
       </Routes>
       <Footer/>
     </div>

@@ -36,9 +36,11 @@ function SquareFootage({ postData }) {
 
     if (sqft < 100) {
       toast.error("Please enter a valid square footage");
+      return
     }
     if (isNaN(sqft)) {
       toast.error("Please enter a valid square footage");
+      return
     }
     else {
       setIsButtonDisabled(false)

@@ -24,7 +24,7 @@ function Address({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    navigate('/address')
+    navigate('/credit')
 
     
   }
@@ -152,17 +152,20 @@ function Address({postData}) {
                 />
                 <p className="text-white text-center justify-center pt-2">{bottomText}</p>
 
-              </div>
-              
-              <button
+                <button
             type="submit"
             disabled={isButtonDisabled}
-            className={`px-6 py-4 mt-5 text-lg justify-center  bg-pink-600 ${isButtonDisabled ? 'cursor-not-allowed disabled:opacity-75  bg-input-purple' : ""} hover:shadow-lg text-white rounded transition duration-200`}
+            className={`px-6 py-4 mt-5 text-lg justify-center text-center w-full bg-pink-600 ${isButtonDisabled ? 'cursor-not-allowed disabled:opacity-75  bg-input-purple' : ""} hover:shadow-lg text-white rounded transition duration-200`}
             id="zipCodeButton"
             onClick={nextStep}>
             Next
           </button>
-            <LinkWithQuery to="/current-policy">Back</LinkWithQuery>
+
+              </div>
+              
+             
+              <LinkWithQuery to="/current-policy">Back</LinkWithQuery>
+              
 
         </form>
       </div>

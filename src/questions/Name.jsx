@@ -10,9 +10,11 @@ import FadeIn from 'react-fade-in';
 
 
 
-function YearBuilt({postData}) {
+function ExpiredInsurance({ postData }) {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
 
   const navigate = useNavigate();
@@ -21,48 +23,46 @@ function YearBuilt({postData}) {
 
   const nextStep = (e) => {
 
-    e.preventDefault();
-    
-    let year = document.getElementById('expires').value;
-
-    console.log('click')
-    navigate('/square-footage')
+    if (firstName === '' || lastName === '') {
+      toast.error('Please enter a valid name');
+      setIsButtonDisabled(true)
+      return
+    }
+    else{
   
+      navigate('/email-phone')
+    }
+
   };
 
-  const sDOB = (e) => {
-    let currentYear = new Date().getFullYear();
-
+  function sFN(e) {
+   
     let v = e.target.value;
-  
-    // make year a number
-    let year = parseInt(v)
-    toast.clearWaitingQueue();
 
-    if (year < 1800 || year > currentYear) {
-      toast.error("Please enter a valid year");
-      setIsButtonDisabled(true);
+    if (v.length < 2) {
+      toast.error("Please enter a valid first name");
+      setIsButtonDisabled(true)
     }
-    // if v isnt the length of 10 toast.error
-     if (v.length < 4) {
-       toast.error("Please enter a valid date");
-       setIsButtonDisabled(true);
-       return
-
-    }
-     if (isNaN(v)) {
-       toast.error("Please enter a number!");
-       setIsButtonDisabled(true);
-return
-      }
     else {
+      setFirstName(v);
       setIsButtonDisabled(false);
     }
-
   }
 
+  function sLN(e) {
 
+    let v = e.target.value;
 
+    if (v.length < 2) {
+      toast.error("Please enter a valid last name");
+      setIsButtonDisabled(true)
+    }
+    else {
+      setLastName(v);
+      setIsButtonDisabled(false);
+    }
+    
+  }
   // get todays date
   return (
     <div className="bg-dark-purple pb-10">
@@ -76,23 +76,12 @@ return
         <div className="m-w-1/2 space-y-8">
           <div>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
-              In What Year Was Your{" "}
+              What is your{" "}
               <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
-              Property Built
+                Full Name
               </span>
               ?
-              </h2>
-       
-
-              <div class="flex items-center justify-center pt-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-</svg>
-          <p className="pl-2 text-white">
-            Estimates are okay!
-          </p>
-        </div>
-              
+            </h2>
           </div>
           <form className="mt-8 space-y-6">
             <div className=" space-y-6 flex flex-col  items-center justify-center">
@@ -101,14 +90,26 @@ return
              
               <input
                             type="text"
-                            name="expires"
-                            id="expires"
-                            placeholder="YYYY"
+                            name="fName"
+                            id="fName"
+                    placeholder="First Name"
                     required
-                    pattern="\d*"
+                    autoComplete="given-name"
+                            className="w-full mb-5 lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
+                   
+                    onBlurCapture={sFN}
+                  />
+                   <input
+                            type="text"
+                            name="lName"
+                            id="lName"
+                    placeholder="Last Name"
+                    autoComplete="family-name"
+
+                            required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
-                    
-                    onBlur={sDOB}
+                   
+                    onBlurCapture={sLN}
                           />
 
               </div>
@@ -134,4 +135,4 @@ return
   );
 }
 
-export default YearBuilt;
+export default ExpiredInsurance;

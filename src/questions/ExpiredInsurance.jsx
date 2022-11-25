@@ -31,7 +31,7 @@ function ExpiredInsurance({postData}) {
   
   };
 
-  function sDOB(e) {
+  const sDOB = (e) => {
     console.log(e.target.value);
 
     let v = e.target.value;
@@ -47,16 +47,20 @@ function ExpiredInsurance({postData}) {
 
     if (year < 2022 || year > 2024) {
       toast.error("Please enter a valid year");
-      setIsButtonDisabled(true)
+      console.log('year is wrong')
+      setIsButtonDisabled(true);
+      return;
     }
-    // if v isnt the length of 10 toast.error
     if (v.length !== 10) {
       toast.error("Please enter a valid date");
+      console.log('length is wrong')
       setIsButtonDisabled(true)
+      return;
 
     }
     else {
       exp = v;
+      console.log('all good')
       setIsButtonDisabled(false);
     }
 
@@ -157,7 +161,7 @@ function ExpiredInsurance({postData}) {
                             required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
-                    onChange={sDOB}
+                    onBlur={sDOB}
                           />
 
               </div>
