@@ -46,11 +46,14 @@ function ExpiredInsurance({postData}) {
     toast.clearWaitingQueue();
 
     if (year < 2022 || year > 2024) {
-     toast.error("Please enter a valid year");
+      toast.error("Please enter a valid year");
+      setIsButtonDisabled(true)
     }
     // if v isnt the length of 10 toast.error
     if (v.length !== 10) {
       toast.error("Please enter a valid date");
+      setIsButtonDisabled(true)
+
     }
     else {
       exp = v;
@@ -153,10 +156,8 @@ function ExpiredInsurance({postData}) {
                     pattern="\d*"
                             required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
-                    onChange={() => {
-                      toast.clearWaitingQueue();
-                  }}
-                    onBlurCapture={sDOB}
+                   
+                    onChange={sDOB}
                           />
 
               </div>

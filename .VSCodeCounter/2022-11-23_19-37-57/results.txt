@@ -1,0 +1,76 @@
+Date : 2022-11-23 19:37:57
+Directory : /Users/davidverduzco/Desktop/homeinsurance
+Total : 37 files,  34943 codes, 47 comments, 634 blanks, all 35624 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          4 |     33,043 |          0 |          3 |     33,046 |
+| JavaScript React |         20 |      1,351 |         11 |        443 |      1,805 |
+| JavaScript       |          5 |        324 |         11 |        110 |        445 |
+| CSS              |          4 |        164 |          0 |         42 |        206 |
+| Markdown         |          1 |         39 |          0 |         33 |         72 |
+| HTML             |          1 |         20 |         25 |          3 |         48 |
+| XML              |          1 |          1 |          0 |          0 |          1 |
+| Properties       |          1 |          1 |          0 |          0 |          1 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                             |         37 |     34,943 |         47 |        634 |     35,624 |
+| public                                                                        |          2 |         45 |         25 |          4 |         74 |
+| src                                                                           |         29 |      1,796 |         22 |        585 |      2,403 |
+| src/apis                                                                      |          1 |        102 |          0 |         46 |        148 |
+| src/assets                                                                    |          2 |          2 |          0 |          0 |          2 |
+| src/components                                                                |          7 |        250 |          1 |         47 |        298 |
+| src/pages                                                                     |          1 |         80 |          0 |          7 |         87 |
+| src/questions                                                                 |         12 |      1,021 |         10 |        389 |      1,420 |
+| src/styles                                                                    |          3 |        141 |          0 |         39 |        180 |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                      | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/davidverduzco/Desktop/homeinsurance/.env                               | Properties       |          1 |          0 |          0 |          1 |
+| /Users/davidverduzco/Desktop/homeinsurance/README.md                          | Markdown         |         39 |          0 |         33 |         72 |
+| /Users/davidverduzco/Desktop/homeinsurance/package-lock.json                  | JSON             |     32,944 |          0 |          1 |     32,945 |
+| /Users/davidverduzco/Desktop/homeinsurance/package.json                       | JSON             |         73 |          0 |          1 |         74 |
+| /Users/davidverduzco/Desktop/homeinsurance/postcss.config.js                  | JavaScript       |          6 |          0 |          1 |          7 |
+| /Users/davidverduzco/Desktop/homeinsurance/public/index.html                  | HTML             |         20 |         25 |          3 |         48 |
+| /Users/davidverduzco/Desktop/homeinsurance/public/manifest.json               | JSON             |         25 |          0 |          1 |         26 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/App.js                         | JavaScript       |        166 |         11 |         51 |        228 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/apis/zipCode.js                | JavaScript       |        102 |          0 |         46 |        148 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/assets/Loader.json             | JSON             |          1 |          0 |          0 |          1 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/assets/car.svg                 | XML              |          1 |          0 |          0 |          1 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/BackButton.jsx      | JavaScript React |         28 |          0 |          4 |         32 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/CTA.jsx             | JavaScript React |         21 |          0 |          2 |         23 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/Footer.jsx          | JavaScript React |         72 |          0 |          6 |         78 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/NavBar.jsx          | JavaScript React |         41 |          0 |         23 |         64 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/ProgressBar.jsx     | JavaScript React |         22 |          0 |          5 |         27 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/Skeleton.jsx        | JavaScript React |          7 |          0 |          1 |          8 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/components/faq.jsx             | JavaScript React |         59 |          1 |          6 |         66 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/index.css                      | CSS              |         23 |          0 |          3 |         26 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/index.js                       | JavaScript       |         11 |          0 |          3 |         14 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/pages/LandingPage.jsx          | JavaScript React |         80 |          0 |          7 |         87 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/Address.jsx          | JavaScript React |        137 |          0 |         42 |        179 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/Bedrooms.jsx         | JavaScript React |         62 |          0 |         29 |         91 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/Claims.jsx           | JavaScript React |         58 |          0 |         29 |         87 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/CurrentInsurance.jsx | JavaScript React |         62 |          0 |         33 |         95 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/DOB.jsx              | JavaScript React |        147 |          3 |         39 |        189 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/ExpiredInsurance.jsx | JavaScript React |        145 |          3 |         38 |        186 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/Gender.jsx           | JavaScript React |         59 |          0 |         28 |         87 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/InsuranceStatus.jsx  | JavaScript React |         56 |          0 |         27 |         83 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/Ownership.jsx        | JavaScript React |         57 |          1 |         29 |         87 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/SquareFootage.jsx    | JavaScript React |         79 |          0 |         30 |        109 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/TypeOfHome.jsx       | JavaScript React |         60 |          0 |         28 |         88 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/questions/YearBuilt.jsx        | JavaScript React |         99 |          3 |         37 |        139 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/styles/LandingPage.css         | CSS              |          8 |          0 |          3 |         11 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/styles/font.css                | CSS              |         36 |          0 |         10 |         46 |
+| /Users/davidverduzco/Desktop/homeinsurance/src/styles/forms.css               | CSS              |         97 |          0 |         26 |        123 |
+| /Users/davidverduzco/Desktop/homeinsurance/tailwind.config.js                 | JavaScript       |         39 |          0 |          9 |         48 |
+| Total                                                                         |                  |     34,943 |         47 |        634 |     35,624 |
++-------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

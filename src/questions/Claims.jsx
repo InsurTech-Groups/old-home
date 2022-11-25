@@ -15,7 +15,6 @@ function Claims({postData}) {
 
   let buttons = [
     { title: 'Yes', id: 'Yes', value: 'Yes', key: 'Yes' },
- 
     { title: 'No', id: 'No', value: 'No', key: 'No' },
   ]
   
@@ -41,7 +40,7 @@ function Claims({postData}) {
       <div className="m-w-1/2 space-y-8">
         <div>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
-              Who is your <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">Current Policy </span> insured with? 
+              Have you filed any  <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">Claims </span> in the last 3 years? 
 
             </h2>
             
@@ -50,7 +49,7 @@ function Claims({postData}) {
 
 
           
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-2 justify-center text-center align-middle">
         {buttons.map((button) => {
                 
           return (

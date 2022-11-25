@@ -16,6 +16,7 @@ import SquareFootage from "./questions/SquareFootage";
 import Gender from "./questions/Gender";
 import DOB from './questions/DOB';
 import Address from "./questions/Address";
+import Claims from './questions/Claims'
 
 export default function App() {
 
@@ -216,6 +217,15 @@ export default function App() {
           path='/address'
           element={
             <Address
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/claims'
+          element={
+            <Claims
               postData={setPostDataForPage}
             />
           }

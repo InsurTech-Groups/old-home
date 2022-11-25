@@ -27,7 +27,7 @@ function ExpiredInsurance({postData}) {
     exp = document.getElementById('expires').value;
 
     console.log('click')
-    navigate('/home-type')
+    navigate('/claims')
   
   };
 

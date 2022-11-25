@@ -1,0 +1,39 @@
+"filename", "language", "JavaScript React", "JavaScript", "XML", "JSON", "CSS", "Properties", "HTML", "Markdown", "comment", "blank", "total"
+"/Users/davidverduzco/Desktop/homeinsurance/.env", "Properties", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"/Users/davidverduzco/Desktop/homeinsurance/README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 39, 0, 33, 72
+"/Users/davidverduzco/Desktop/homeinsurance/package-lock.json", "JSON", 0, 0, 0, 32944, 0, 0, 0, 0, 0, 1, 32945
+"/Users/davidverduzco/Desktop/homeinsurance/package.json", "JSON", 0, 0, 0, 73, 0, 0, 0, 0, 0, 1, 74
+"/Users/davidverduzco/Desktop/homeinsurance/postcss.config.js", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"/Users/davidverduzco/Desktop/homeinsurance/public/index.html", "HTML", 0, 0, 0, 0, 0, 0, 20, 0, 25, 3, 48
+"/Users/davidverduzco/Desktop/homeinsurance/public/manifest.json", "JSON", 0, 0, 0, 25, 0, 0, 0, 0, 0, 1, 26
+"/Users/davidverduzco/Desktop/homeinsurance/src/App.js", "JavaScript", 0, 166, 0, 0, 0, 0, 0, 0, 11, 51, 228
+"/Users/davidverduzco/Desktop/homeinsurance/src/apis/zipCode.js", "JavaScript", 0, 102, 0, 0, 0, 0, 0, 0, 0, 46, 148
+"/Users/davidverduzco/Desktop/homeinsurance/src/assets/Loader.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/davidverduzco/Desktop/homeinsurance/src/assets/car.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/BackButton.jsx", "JavaScript React", 28, 0, 0, 0, 0, 0, 0, 0, 0, 4, 32
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/CTA.jsx", "JavaScript React", 21, 0, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/Footer.jsx", "JavaScript React", 72, 0, 0, 0, 0, 0, 0, 0, 0, 6, 78
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/NavBar.jsx", "JavaScript React", 41, 0, 0, 0, 0, 0, 0, 0, 0, 23, 64
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/ProgressBar.jsx", "JavaScript React", 22, 0, 0, 0, 0, 0, 0, 0, 0, 5, 27
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/Skeleton.jsx", "JavaScript React", 7, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"/Users/davidverduzco/Desktop/homeinsurance/src/components/faq.jsx", "JavaScript React", 59, 0, 0, 0, 0, 0, 0, 0, 1, 6, 66
+"/Users/davidverduzco/Desktop/homeinsurance/src/index.css", "CSS", 0, 0, 0, 0, 23, 0, 0, 0, 0, 3, 26
+"/Users/davidverduzco/Desktop/homeinsurance/src/index.js", "JavaScript", 0, 11, 0, 0, 0, 0, 0, 0, 0, 3, 14
+"/Users/davidverduzco/Desktop/homeinsurance/src/pages/LandingPage.jsx", "JavaScript React", 80, 0, 0, 0, 0, 0, 0, 0, 0, 7, 87
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/Address.jsx", "JavaScript React", 137, 0, 0, 0, 0, 0, 0, 0, 0, 42, 179
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/Bedrooms.jsx", "JavaScript React", 62, 0, 0, 0, 0, 0, 0, 0, 0, 29, 91
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/Claims.jsx", "JavaScript React", 58, 0, 0, 0, 0, 0, 0, 0, 0, 29, 87
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/CurrentInsurance.jsx", "JavaScript React", 62, 0, 0, 0, 0, 0, 0, 0, 0, 33, 95
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/DOB.jsx", "JavaScript React", 147, 0, 0, 0, 0, 0, 0, 0, 3, 39, 189
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/ExpiredInsurance.jsx", "JavaScript React", 145, 0, 0, 0, 0, 0, 0, 0, 3, 38, 186
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/Gender.jsx", "JavaScript React", 59, 0, 0, 0, 0, 0, 0, 0, 0, 28, 87
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/InsuranceStatus.jsx", "JavaScript React", 56, 0, 0, 0, 0, 0, 0, 0, 0, 27, 83
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/Ownership.jsx", "JavaScript React", 57, 0, 0, 0, 0, 0, 0, 0, 1, 29, 87
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/SquareFootage.jsx", "JavaScript React", 79, 0, 0, 0, 0, 0, 0, 0, 0, 30, 109
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/TypeOfHome.jsx", "JavaScript React", 60, 0, 0, 0, 0, 0, 0, 0, 0, 28, 88
+"/Users/davidverduzco/Desktop/homeinsurance/src/questions/YearBuilt.jsx", "JavaScript React", 99, 0, 0, 0, 0, 0, 0, 0, 3, 37, 139
+"/Users/davidverduzco/Desktop/homeinsurance/src/styles/LandingPage.css", "CSS", 0, 0, 0, 0, 8, 0, 0, 0, 0, 3, 11
+"/Users/davidverduzco/Desktop/homeinsurance/src/styles/font.css", "CSS", 0, 0, 0, 0, 36, 0, 0, 0, 0, 10, 46
+"/Users/davidverduzco/Desktop/homeinsurance/src/styles/forms.css", "CSS", 0, 0, 0, 0, 97, 0, 0, 0, 0, 26, 123
+"/Users/davidverduzco/Desktop/homeinsurance/tailwind.config.js", "JavaScript", 0, 39, 0, 0, 0, 0, 0, 0, 0, 9, 48
+"Total", "-", 1351, 324, 1, 33043, 164, 1, 20, 39, 47, 634, 35624
