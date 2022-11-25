@@ -16,6 +16,7 @@ function EmailPhone({ postData }) {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const navigate = useNavigate();
 
   function editPhoneNumber(e){
 

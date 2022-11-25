@@ -9,7 +9,7 @@ export default function ThankYou() {
   return (
     <div className="bg-dark-purple pb-10">
 
-<div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
+<div className="formArea flex items-center  mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
         <div className="m-w-1/2 space-y-8">
           <div className='justify-center text-center'>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
@@ -20,7 +20,7 @@ export default function ThankYou() {
                 Quote!
             </h2>
 
-            <div class="flex items-center justify-center pt-4">
+            <div class="flex items-center pt-5 justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
 </svg>
