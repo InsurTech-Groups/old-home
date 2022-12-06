@@ -12,6 +12,8 @@ import FadeIn from 'react-fade-in';
 
 function YearBuilt({postData}) {
 
+  
+
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
 
@@ -39,7 +41,7 @@ function YearBuilt({postData}) {
     let year = parseInt(v)
     toast.clearWaitingQueue();
 
-    if (year < 1800 || year > currentYear) {
+    if (year < 1900 || year > currentYear) {
       toast.error("Please enter a valid year");
       setIsButtonDisabled(true);
     }
@@ -66,7 +68,7 @@ return
   // get todays date
   return (
     <div className="bg-dark-purple pb-10">
-      <Banner setProgress={10} />
+      <Banner setProgress={46} />
       <FadeIn>
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
@@ -123,7 +125,7 @@ return
           </button>
             </div>
 
-            <LinkWithQuery to="/current-insurance">Back</LinkWithQuery>
+            <LinkWithQuery to="/bedrooms">Back</LinkWithQuery>
           </form>
         </div>
       </div>

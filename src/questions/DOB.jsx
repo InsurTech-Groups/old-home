@@ -126,7 +126,7 @@ function ExpiredInsurance({postData}) {
   // get todays date
   return (
     <div className="bg-dark-purple pb-10">
-      <Banner setProgress={10} />
+      <Banner setProgress={66} />
       <FadeIn>
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
@@ -172,7 +172,7 @@ function ExpiredInsurance({postData}) {
           </button>
             </div>
 
-            <LinkWithQuery to="/current-insurance">Back</LinkWithQuery>
+            <LinkWithQuery to="/gender">Back</LinkWithQuery>
           </form>
         </div>
       </div>

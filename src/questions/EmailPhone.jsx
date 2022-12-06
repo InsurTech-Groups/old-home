@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
 
 
-
 function EmailPhone({ postData }) {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -33,12 +32,19 @@ function EmailPhone({ postData }) {
         setIsButtonDisabled(true);
         return false;
     }
-    else{
+    
+     else{
 setIsButtonDisabled(false)
         toast.clearWaitingQueue();
-        toast.dismiss()
+      toast.dismiss()
+      
+     
     }
-}
+  }
+  
+
+ 
+
 
 function editEmail(e){
     let em = email;
@@ -73,6 +79,7 @@ function nextStep(e){
         toast.error('Please make sure all fields are complete');
         return false
     }
+  
 
     else{
 
@@ -83,7 +90,7 @@ function nextStep(e){
 
         setIsButtonDisabled(false);
       
-      navigate('/thank-you')
+      //navigate('/thank-you')
 
     }
 
@@ -93,7 +100,7 @@ function nextStep(e){
   // get todays date
   return (
     <div className="bg-dark-purple pb-10">
-      <Banner setProgress={10} />
+      <Banner setProgress={99} />
       <FadeIn>
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
@@ -135,7 +142,8 @@ function nextStep(e){
 
 
 <PhoneInput
-                                        country="US"
+                    defaultCountry="US"
+                    country="US"
                                         className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                                         id="phone_home"
                                         placeholder="Phone Number"
@@ -167,7 +175,7 @@ function nextStep(e){
           </button>
             </div>
 
-            <LinkWithQuery to="/current-insurance">Back</LinkWithQuery>
+            <LinkWithQuery to="/name">Back</LinkWithQuery>
           </form>
         </div>
       </div>

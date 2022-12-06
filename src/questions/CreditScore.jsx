@@ -36,7 +36,7 @@ function CreditScore({postData}) {
     
       
       <div className="bg-dark-purple pb-10">
-      <Banner setProgress={20} />
+      <Banner setProgress={86} />
       <FadeIn>
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
@@ -73,7 +73,7 @@ function CreditScore({postData}) {
             })}
 
             </div>
-            <LinkWithQuery to="/ownership">Back</LinkWithQuery>
+            <LinkWithQuery to="/address">Back</LinkWithQuery>
 
         </form>
       </div>

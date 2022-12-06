@@ -11,21 +11,21 @@ function LandingPage({postData}) {
 
   const features = [
     {
-      name: 'Competitive HOme Rates',
+      name: 'Competitive Home Rates',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'We shop with over 20 of our partnered carriers to bring you the most competitive and best price tailored just for you.',
       icon: GlobeAltIcon,
     },
     {
       name: 'Getting A Quote Is Fast And Easy',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Fill out a form takes less than 3 minutes, it is quick and easy!',
       icon: ScaleIcon,
     },
     {
-      name: 'Get A Quote Within 24 Hours',
+      name: 'Get A Quote Fast',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Once you submit a form, one of our licensed agents will get in touch with you and let you know just how much you can save.',
       icon: BoltIcon,
     },
   ]
@@ -44,9 +44,7 @@ function LandingPage({postData}) {
               </span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for home insurance has never been easier.
             </p>
             <ZipCode postData={postData} />
           </div>

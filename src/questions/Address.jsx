@@ -47,39 +47,12 @@ function Address({postData}) {
     }
 }
 
-  function handleSubmit(e){
-
-    e.preventDefault()
-    const address = document.getElementById('address').value;
-    const addStr = address.split(' ').join('+');
-    axios.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + addStr + "&key=" + apiKey ).then((res) => {
-        const json = res.data;
-        const results = json.status
-        if (results == "ZERO_RESULTS"){
-            toast.error('Please Enter A Valid Address');
-            setIsButtonDisabled(true)
-        }
-        else{
-            toast.clearWaitingQueue();
-            toast.dismiss()
-           
-        navigate('/name')
-            
-        }
-    })
-
-
-    if(isButtonDisabled){
-        toast.error('Please enter a valid address');
-        return false
-    }
- }
   
   return (
     
       
       <div className="bg-dark-purple pb-10">
-      <Banner setProgress={20} />
+      <Banner setProgress={80} />
       <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
       <FadeIn>
@@ -164,7 +137,7 @@ function Address({postData}) {
               </div>
               
              
-              <LinkWithQuery to="/current-policy">Back</LinkWithQuery>
+              <LinkWithQuery to="/claims">Back</LinkWithQuery>
               
 
         </form>

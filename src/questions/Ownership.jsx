@@ -35,7 +35,7 @@ function Ownership({postData}) {
       
     <div className="bg-dark-purple pb-10">
       <FadeIn>
-      <Banner setProgress={10} />
+      <Banner setProgress={33} />
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
 
@@ -69,7 +69,7 @@ function Ownership({postData}) {
             })}
 
             </div>
-            <LinkWithQuery to="/">Back</LinkWithQuery>
+            <LinkWithQuery to="/home-type">Back</LinkWithQuery>
         </form>
         </div>
        

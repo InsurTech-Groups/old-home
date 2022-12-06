@@ -31,7 +31,7 @@ function InsuranceStatus({postData}) {
       
     <div className="bg-dark-purple pb-10">
       <FadeIn>
-      <Banner setProgress={10} />
+      <Banner setProgress={6} />
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
 
