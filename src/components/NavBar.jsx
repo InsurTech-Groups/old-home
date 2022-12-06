@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Logo from '../assets/logo.png';
+import Logo from '../assets/whiteLogo.png';
 
 export default function NavBar(props){
 
  
 
     return(
-        <header className="bg-white sticky">
+        <header className=" bg-dark-purple sticky pb-10">
 
             
             <nav
@@ -27,7 +27,7 @@ export default function NavBar(props){
 
 
                                 <a
-                                    className="block px-1 py-1 text-lg font-extrabold  text-white rounded transition duration-200   bg-gradient-to-r bg-clip-text  text-transparent
+                                    className="block px-1 text-lg font-extrabold  text-white rounded transition duration-200   bg-gradient-to-r bg-clip-text  text-transparent
                                     from-purple-400 to-pink-600
             animate-text  "
                                     href="#medicare-nav"
@@ -35,17 +35,11 @@ export default function NavBar(props){
                                 >
                                     <div className="flex">
                                         <div className="font-bold">
-                                            <h4 className="lg:text-3xl md:text-xl">
-                    
-
-                        (888) 123-4567
-
-
-                      
-                                            </h4>
-                                            <p className="hidden text-sm md:block">
-                                                Monday - Friday 8am - 5pm EST
-                                            </p>
+                                    <button className='bg-button-purple p-2  rounded transition duration-200   bg-gradient-to-r text-white
+                                    from-purple-400 to-pink-600 animate-text'>
+                                        (888) 123-45678
+                                            </button>
+                                           
                                         </div>
                                     </div>
                                 </a>

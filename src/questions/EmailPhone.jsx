@@ -136,7 +136,7 @@ function nextStep(e){
                             className="w-full mb-5 lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
                             onChange={setEmail}
-                            onBlur={editEmail}
+                            onBlurCapture={editEmail}
 
                   />
 
@@ -148,7 +148,7 @@ function nextStep(e){
                                         id="phone_home"
                                         placeholder="Phone Number"
                                         name="phone_home"
-                                        onBlur={editPhoneNumber}
+                                        onBlurCapture={editPhoneNumber}
                                         onChange={setPhone}
                                         minLength={14}
                                         maxLength={14}
@@ -161,7 +161,7 @@ function nextStep(e){
                 </div>
                 
                 <p className="text-white w-1/2">
-                By clicking "Get My Free Quote" below, I am agreeing to receive text messages from InsurTech Groups and business partners. I provide my signature expressly consenting to recurring contact from InsurTech Groups  or its business partners at the number I provided regarding products or services via live, automated or prerecorded telephone call, text message, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of purchasing property, goods, or services. I understand that I can revoke this consent at any time.<a className="text-button-purple "href="https://www.insurtechgroups.com/terms-conditions"> Terms & conditions</a>  & <a href="https://www.insurtechgroups.com/privacy-policy" className="text-button-purple">Privacy policy</a> apply.
+                By clicking "Get My Free Quote" below, I am agreeing to receive text messages from InsurTech Groups and business partners. I provide my signature expressly consenting to recurring contact from Insurtech Groups  or its business partners at the number I provided regarding products or services via live, automated or prerecorded telephone call, text message, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of purchasing property, goods, or services. I understand that I can revoke this consent at any time.<a className="text-button-purple "href="https://www.insurtechgroups.com/terms-conditions"> Terms & conditions</a>  & <a href="https://www.insurtechgroups.com/privacy-policy" className="text-button-purple">Privacy policy</a> apply.
 
                 </p>
 
