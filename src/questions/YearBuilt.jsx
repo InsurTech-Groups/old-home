@@ -15,6 +15,7 @@ function YearBuilt({postData}) {
   
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [year, setYear] = useState('')
 
 
   const navigate = useNavigate();
@@ -24,34 +25,46 @@ function YearBuilt({postData}) {
   const nextStep = (e) => {
 
     e.preventDefault();
-    
-    let year = document.getElementById('expires').value;
 
-    console.log('click')
-    navigate('/square-footage')
-  
-  };
-
-  const sDOB = (e) => {
     let currentYear = new Date().getFullYear();
 
-    let v = e.target.value;
-  
-    // make year a number
-    let year = parseInt(v)
-    toast.clearWaitingQueue();
-
+    
     if (year < 1900 || year > currentYear) {
       toast.error("Please enter a valid year");
       setIsButtonDisabled(true);
+      return
     }
-    // if v isnt the length of 10 toast.error
-     if (v.length < 4) {
-       toast.error("Please enter a valid date");
+    if (year.length < 4) {
+      toast.error('Please Enter A Valid Year')
        setIsButtonDisabled(true);
        return
 
     }
+    else{
+
+      navigate('/square-footage')
+    }
+
+  
+  };
+
+  const sYear = (e) => {
+    let currentYear = new Date().getFullYear();
+    toast.clearWaitingQueue();
+    toast.dismiss();
+
+    let v = e.target.value;
+
+   
+  
+    // make year a number
+    let year = parseInt(v)
+
+    setYear(year)
+
+    
+    // if v isnt the length of 10 toast.error
+   
      if (isNaN(v)) {
        toast.error("Please enter a number!");
        setIsButtonDisabled(true);
@@ -110,7 +123,7 @@ return
                     pattern="\d*"
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                     
-                    onBlur={sDOB}
+                    onChange={sYear}
                           />
 
               </div>

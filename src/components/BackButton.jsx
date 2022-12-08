@@ -4,9 +4,9 @@ export const LinkWithQuery = ({ children, to, ...props }) => {
 	const { search } = useLocation();
 
 	return (
-		<Link to={to + search} {...props} className="items-start max-w-1/2">
+		<Link to={to + search} {...props} className="inline-block">
 
-			<button className=" text-gray-400  rounded-sm flex  max-w-1/2  py-4 px-6 mr-2 mt-10 justify-start items-left ">
+			<button className=" text-gray-400  rounded-sm flex  py-4 px-6 mr-2 mt-5 justify-center items-left ">
 				<svg
 					className="h-5 w-5 mr-2 fill-current"
 					version="1.1"

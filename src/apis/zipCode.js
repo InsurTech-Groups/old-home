@@ -51,7 +51,7 @@ function ZipCode({postData}) {
 
     let zipCode = e.target.value;
 
-    setIsButtonDisabled(true);
+    setIsButtonDisabled(false);
 
     let zipTrim = zipCode.trim();
 
@@ -88,16 +88,26 @@ function ZipCode({postData}) {
 
     e.preventDefault();
 
+    let zip = zipCodeValue;
+
+    zip = parseInt(zip);
+
     if (isButtonDisabled) {
       toast.error("Please enter a valid zip code!");
       return
     }
-    else {
-
-
-     
-
- 
+    else if (isNaN(zip)) {
+      toast.error("Please enter a valid zip code!");
+      setIsButtonDisabled(true);
+      return
+      
+    }
+    else if(zipCodeValue.length < 5){
+      toast.error('Please enter a valid zip code!');
+      setIsButtonDisabled(true);
+      return
+    }
+    else { 
       navigate('/insurance-status');
     }
 
@@ -122,12 +132,15 @@ function ZipCode({postData}) {
             name="zipCode"
             placeholder="Zip Code"
             pattern="\d*"
-            id="zipCode"
+                        id="zipCode"
             defaultValue={zipCodeValue}
-            onBlur={revalidateZipCode}
+            onChange={revalidateZipCode}
             minLength={5}
             maxLength={5}
+            required
           />
+
+          
 
 
 
@@ -140,7 +153,7 @@ function ZipCode({postData}) {
             Start My Quote
           </button>
         </div>
-        <p className='text-white font-extrabold text-md pt-2 pb-2'>Savings Available In <span className=' font-thin bg-gradient-to-r text-lg rounded-lg pl-2 pr-2 from-purple-400 to-pink-600'>{cityValue}, {stateValue} </span></p>
+        <p className='text-white font-extrabold text-md pt-2 pb-2' id='location'>Savings Available In <span className=' font-thin bg-gradient-to-r text-lg rounded-lg pl-2 pr-2 from-purple-400 to-pink-600'>{cityValue}, {stateValue} </span></p>
       </form>
     </div>
   )

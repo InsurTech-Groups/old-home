@@ -27,7 +27,7 @@ export default function NavBar(props){
 
 
                                 <a
-                                    className="block px-1 text-lg font-extrabold  text-white rounded transition duration-200   bg-gradient-to-r bg-clip-text  text-transparent
+                                    className="px-1 text-lg md:text-sm sm:text-sm font-extrabold  text-white rounded transition duration-200   bg-gradient-to-r bg-clip-text  text-transparent
                                     from-purple-400 to-pink-600
             animate-text  "
                                     href="#medicare-nav"
@@ -36,7 +36,7 @@ export default function NavBar(props){
                                     <div className="flex">
                                         <div className="font-bold">
                                     <button className='bg-button-purple p-2  rounded transition duration-200   bg-gradient-to-r text-white
-                                    from-purple-400 to-pink-600 animate-text'>
+                                    from-purple-400 to-pink-600 animate-text lg:text-md md:text-sm sm:text-sm'>
                                         (888) 123-45678
                                             </button>
                                            

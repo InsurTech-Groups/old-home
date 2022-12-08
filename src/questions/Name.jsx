@@ -28,6 +28,11 @@ function ExpiredInsurance({ postData }) {
       setIsButtonDisabled(true)
       return
     }
+    if (firstName.length < 2 || lastName.length < 2) {
+      toast.error("Please make sure all fields are filled out");
+      setIsButtonDisabled(true)
+      return
+    }
     else{
   
       navigate('/email-phone')
@@ -39,31 +44,19 @@ function ExpiredInsurance({ postData }) {
    
     let v = e.target.value;
 
-    if (v.length < 2) {
-      toast.error("Please enter a valid first name");
-      setIsButtonDisabled(true)
-    }
-    else {
-      setFirstName(v);
-      setIsButtonDisabled(false);
-    }
+    setFirstName(v)
+    setIsButtonDisabled(false);
   }
 
   function sLN(e) {
 
+    setIsButtonDisabled(false)
+
     let v = e.target.value;
 
-    if (v.length < 2) {
-      toast.error("Please enter a valid last name");
-      setIsButtonDisabled(true)
-    }
-    else {
-      setLastName(v);
-      setIsButtonDisabled(false);
-    }
+  setLastName(v)
     
   }
-  // get todays date
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={93} />
@@ -97,7 +90,7 @@ function ExpiredInsurance({ postData }) {
                     autoComplete="given-name"
                             className="w-full mb-5 lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
-                    onBlurCapture={sFN}
+                            onChange={sFN}
                   />
                    <input
                             type="text"
@@ -109,7 +102,7 @@ function ExpiredInsurance({ postData }) {
                             required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
-                    onBlurCapture={sLN}
+                    onChange={sLN}
                           />
 
               </div>

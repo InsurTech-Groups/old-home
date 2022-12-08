@@ -12,7 +12,7 @@ export default function CTA() {
         </p>
         <a
           href="#"
-          className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-button-purple px-5 py-3 text-base font-medium text-white hover:bg-indigo-50 sm:w-auto"
+          className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-button-purple px-5 py-3 text-base font-medium text-white  sm:w-auto"
         >
           (888) 123-45678
         </a>

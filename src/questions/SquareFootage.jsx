@@ -28,24 +28,29 @@ function SquareFootage({ postData }) {
     }
   }
 
-  const handleInputChange = (e) => {
+  const setSqft = (e) => {
+
+    setIsButtonDisabled(false)
     e.preventDefault();
     let v = e.currentTarget.value;
 
     let sqft = parseInt(v);
 
+    console.log(sqft)
+
     if (sqft < 100) {
-      toast.error("Please enter a valid square footage");
+      toast.error("Please enter a valid square footage!");
+      setIsButtonDisabled(true)
       return
     }
     if (isNaN(sqft)) {
       toast.error("Please enter a valid square footage");
+      setIsButtonDisabled(true)
       return
     }
-    else {
-      setIsButtonDisabled(false)
-
-    }
+   else{
+    setIsButtonDisabled(false)
+   }
   }
   
   return (
@@ -63,7 +68,14 @@ function SquareFootage({ postData }) {
               What is the <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">Square Footage </span> of your property? 
 
             </h2>
-            
+            <div class="flex items-center justify-center pt-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+</svg>
+          <p className="pl-2 text-white">
+            The minimum is 100 square feet
+          </p>
+        </div>
         </div>
         <form className="mt-8 space-y-6">
 
@@ -80,7 +92,7 @@ function SquareFootage({ postData }) {
                     required
                     pattern="\d*"
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
-                   onChange={handleInputChange}
+                   onChange={setSqft}
                           />
 
               </div>

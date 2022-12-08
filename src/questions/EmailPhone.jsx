@@ -135,8 +135,8 @@ function nextStep(e){
                     autoComplete="email"
                             className="w-full mb-5 lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
-                            onChange={setEmail}
-                            onBlurCapture={editEmail}
+                            onChange={editEmail}
+                            onBlurCapture={setEmail}
 
                   />
 
@@ -148,8 +148,8 @@ function nextStep(e){
                                         id="phone_home"
                                         placeholder="Phone Number"
                                         name="phone_home"
-                                        onBlurCapture={editPhoneNumber}
-                                        onChange={setPhone}
+                                        onBlurCapture={setPhone}
+                                        onChange={editPhoneNumber}
                                         minLength={14}
                                         maxLength={14}
                                         required={true}

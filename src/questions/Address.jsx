@@ -1,15 +1,12 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, } from "react";
 import "../styles/forms.css";
-import $ from "jquery";
 import Banner from "../components/ProgressBar";
 import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+
 import Autocomplete from "react-google-autocomplete";
-import axios from "axios";
 
 function Address({postData}) {
 
@@ -17,7 +14,6 @@ function Address({postData}) {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [addressValue, setAddressValue] = useState('');
   const [bottomText, setBottomText] = useState()
-  const apiKey = process.env.REACT_APP_GOOGLEAPIKEY;
 
   const nextStep = (e) => {
     
@@ -33,7 +29,7 @@ function Address({postData}) {
 
     let address = document.getElementById('address').value;
     let trim = address.trim();
-    if(address === "" || address === null || address === undefined || trim.length === 0 || trim.length <= 4){
+    if(address ==="" || address === null || address === undefined || trim.length === 0 || trim.length <= 4){
         setIsButtonDisabled(true)
     }
     else{
@@ -53,7 +49,6 @@ function Address({postData}) {
       
       <div className="bg-dark-purple pb-10">
       <Banner setProgress={80} />
-      <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
       <FadeIn>
 
@@ -78,7 +73,6 @@ function Address({postData}) {
                                     className="appearance-none p-3  text-lg font-semibold leading-none bg-input-purple rounded text-white h-16 w-full text-center"
                                     id="address"
                   name="address"
-                  defaultValue={addressValue}
                   type="text"
                                     label="address"
                                     autoComplete="street-address"

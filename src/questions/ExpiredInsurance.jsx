@@ -13,6 +13,7 @@ import FadeIn from 'react-fade-in';
 function ExpiredInsurance({postData}) {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [expInsurance, setExpInsurance] = useState('')
 
 
   const navigate = useNavigate();
@@ -26,23 +27,36 @@ function ExpiredInsurance({postData}) {
     
     exp = document.getElementById('expires').value;
 
-    console.log('click')
-    navigate('/home-type')
+    let value = expInsurance;
+
+    if(expInsurance.length < 10){
+      setIsButtonDisabled(true);
+      toast.error('Please enter a valid date');
+      return
+    }
+
+    else{
+      navigate('/home-type')
+    }  
   
   };
 
-  const sDOB = (e) => {
-    console.log(e.target.value);
 
-    let v = e.target.value;
-  
+
+
+  const validationExpiration = (input) => {
+
+    console.log('input text is: ' +  input)
+
+    let v = input;
+
 
     let year = v.slice(6, 10);
 
     // make year a number
     year = parseInt(year);
 
-    console.log(year)
+    console.log('year as int: ' + year)
     toast.clearWaitingQueue();
 
     if (year < 2022 || year > 2024) {
@@ -66,8 +80,11 @@ function ExpiredInsurance({postData}) {
 
   }
 
-  useEffect(() => {
+  const dateInputvalidate = (e) => {
+
     var date = document.getElementById("expires");
+    toast.clearWaitingQueue();
+    toast.dismiss();
 
     function checkValue(str, max) {
       if (str.charAt(0) !== "0" || str == "00") {
@@ -82,6 +99,8 @@ function ExpiredInsurance({postData}) {
     }
 
     date.addEventListener("input", function (e) {
+
+      setIsButtonDisabled(false)
       this.type = "text";
       var input = this.value;
       if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
@@ -91,12 +110,13 @@ function ExpiredInsurance({postData}) {
       if (values[0]) values[0] = checkValue(values[0], 12);
       if (values[1]) values[1] = checkValue(values[1], 31);
       var output = values.map(function (v, i) {
-        return v.length == 2 && i < 2 ? v + " / " : v;
+        return v.length == 2 && i < 2 ? v + "/" : v;
       });
       this.value = output.join("").substr(0, 14);
     });
 
     date.addEventListener("blur", function (e) {
+      setIsButtonDisabled(false)
       this.type = "text";
       var input = this.value;
       var values = input.split("/").map(function (v, i) {
@@ -124,10 +144,16 @@ function ExpiredInsurance({postData}) {
         }
       }
       this.value = output;
-    });
-  }, []);
+      setIsButtonDisabled(false)
 
-  // get todays date
+      setExpInsurance(input)
+
+      validationExpiration(input);
+    });
+  }
+   
+
+ 
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={20} />
@@ -154,14 +180,14 @@ function ExpiredInsurance({postData}) {
              
               <input
                             type="text"
-                            name="expires"
+                            name="exp"
                             id="expires"
                     placeholder="MM/DD/YYYY"
                     pattern="\d*"
                             required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
-                   
-                    onBlur={sDOB}
+                  onChange={(e) => validationExpiration(e)}
+                  onKeyDown={dateInputvalidate}
                           />
 
               </div>

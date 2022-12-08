@@ -13,6 +13,7 @@ import FadeIn from 'react-fade-in';
 function ExpiredInsurance({postData}) {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [dateofbirth, setdateofbirth] = useState('')
 
 
   const navigate = useNavigate();
@@ -22,48 +23,73 @@ function ExpiredInsurance({postData}) {
 
   const nextStep = (e) => {
 
-    e.preventDefault();
+
+      e.preventDefault();
     
     exp = document.getElementById('expires').value;
 
-    console.log('click')
-    navigate('/claims')
+    let value = dateofbirth;
+
+    if(dateofbirth.length < 10){
+      setIsButtonDisabled(true);
+      toast.error('Please enter a valid date');
+      return
+    }
+
+    else{
+      navigate('/claims')
+    }  
+  
   
   };
 
-  function sDOB(e) {
-    console.log(e.target.value);
-
-    let v = e.target.value;
   
+  const validationExpiration = (input) => {
+
+    console.log('input text is: ' +  input)
+
+    let currentYear = new Date().getFullYear();
+
+    let adultAge = currentYear - 18;
+
+    console.log(adultAge)
+
+    let v = input;
+
 
     let year = v.slice(6, 10);
 
     // make year a number
     year = parseInt(year);
-    let cY = new Date().getFullYear();
 
-    let minAge = cY - 18;
-
-    console.log(year)
+    console.log('year as int: ' + year)
     toast.clearWaitingQueue();
 
-    if (year < 1900 || year > minAge) {
-     toast.error("Please enter a valid year");
+    if (year < 1900 || year > adultAge) {
+      toast.error("Please enter a valid year");
+      console.log('year is wrong')
+      setIsButtonDisabled(true);
+      return;
     }
-    // if v isnt the length of 10 toast.error
     if (v.length !== 10) {
       toast.error("Please enter a valid date");
+      console.log('length is wrong')
+      setIsButtonDisabled(true)
+      return;
+
     }
     else {
       exp = v;
+      console.log('all good')
       setIsButtonDisabled(false);
     }
 
   }
+const dateInputvalidate = (e) => {
 
-  useEffect(() => {
     var date = document.getElementById("expires");
+    toast.clearWaitingQueue();
+    toast.dismiss();
 
     function checkValue(str, max) {
       if (str.charAt(0) !== "0" || str == "00") {
@@ -78,6 +104,8 @@ function ExpiredInsurance({postData}) {
     }
 
     date.addEventListener("input", function (e) {
+
+      setIsButtonDisabled(false)
       this.type = "text";
       var input = this.value;
       if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
@@ -87,12 +115,13 @@ function ExpiredInsurance({postData}) {
       if (values[0]) values[0] = checkValue(values[0], 12);
       if (values[1]) values[1] = checkValue(values[1], 31);
       var output = values.map(function (v, i) {
-        return v.length == 2 && i < 2 ? v + " / " : v;
+        return v.length == 2 && i < 2 ? v + "/" : v;
       });
       this.value = output.join("").substr(0, 14);
     });
 
     date.addEventListener("blur", function (e) {
+      setIsButtonDisabled(false)
       this.type = "text";
       var input = this.value;
       var values = input.split("/").map(function (v, i) {
@@ -120,8 +149,16 @@ function ExpiredInsurance({postData}) {
         }
       }
       this.value = output;
+      setIsButtonDisabled(false)
+
+      setdateofbirth(input)
+
+      validationExpiration(input);
     });
-  }, []);
+  }
+   
+
+
 
   // get todays date
   return (
@@ -157,7 +194,8 @@ function ExpiredInsurance({postData}) {
                             required
                             className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
-                    onBlurCapture={sDOB}
+                            onChange={(e) => validationExpiration(e)}
+                            onKeyDown={dateInputvalidate}
                           />
 
               </div>
