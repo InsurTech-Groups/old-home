@@ -2,14 +2,23 @@ import React from 'react';
 import Lottie from "lottie-react";
 import HomeInsurane from '../assets/HomeInsurance.json';
 import "../styles/forms.css";
+import Agent from '../assets/agent.jpg'
 
 
 
 export default function ThankYou() {
+
+
+  //TODO:
+    // Get timezone and dynamically show
+
+  const time = new Date().toString('en-US', {timeZone: "America/New York"})
+
+
   return (
     <div className="bg-dark-purple pb-10">
 
-<div className="formArea flex items-center  mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
+<div className="formArea flex items-center py-5 px-4 sm:px-6 lg:px-4 flex-col">
         <div className="m-w-1/2 space-y-8">
           <div className='justify-center text-center'>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
@@ -20,27 +29,41 @@ export default function ThankYou() {
                 Quote!
             </h2>
 
-            <div class="flex items-center pt-5 justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-</svg>
-          <p className="pl-2 text-white text-center">
-                An Agent Will Be Reaching Out To You Shortly!
-               
-               
+            <div>
+            <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />
+      <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-lg bg-button-purple shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
+          <div className="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+            <div className="lg:self-center">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <span className="block">A licensed agent will be with you shortly!</span>
+              </h2>
+              <p className="mt-4 text-lg leading-6 text-white">
+                Want to talk to an agent faster? Call us and we can help you get quoted today!
               </p>
-              
-              
+              <a
+                href="#"
+                className="mt-8 inline-flex items-center rounded-md border border-transparent bg-input-purple px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-50 hover:text-button-purple"
+              >
+                Call An Agent Now 
+
+                
+                
+                             </a>
             </div>
-            <p className="pl-2 text-white text-center"><br /> Or Call Now</p>
-            <button
-            type=""
+          </div>
+          <div className="aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+            <img
+              className="translate-x-1 translate-y-1 transform rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
+              src={Agent}
+              alt="App screenshot"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
            
-            className={`px-6 py-4 max-w-xl  mt-5 text-lg bg-pink-600 hover:shadow-lg text-white rounded transition duration-200`}
-            id="zipCodeButton">
-            Call Now
-          </button>
-          </div> <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />
+          </div> 
         
         </div>
       </div>

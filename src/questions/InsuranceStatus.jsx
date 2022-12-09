@@ -23,7 +23,25 @@ function InsuranceStatus({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    v === 'Yes' ? navigate('/current-insurance') : navigate('/home-type')
+    if(v === 'Yes'){
+
+      navigate('/current-insurance')
+    }
+    else{
+
+      postData({
+        ...postData,
+       data: {
+        current_policy: {
+          insurance_company: 'None',
+          expiration_date: 'None',
+        }
+       }
+        
+      })
+
+      navigate('/home-type')
+    }
   }
   
   return (

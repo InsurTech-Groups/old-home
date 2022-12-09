@@ -108,12 +108,34 @@ function ZipCode({postData}) {
       return
     }
     else { 
-      navigate('/insurance-status');
+
+      updatededProps();
     }
 
   }
 
+  const updatededProps = () => {
 
+    postData(current => {
+
+      return{
+        ...current,
+        contact: {
+          ...current.contact, 
+          city: cityValue,
+          state: stateValue,
+          zip_code: zipCodeValue
+        }
+      }
+      
+    })
+    navigate('/insurance-status');
+
+  }
+
+  
+
+ 
 
 
   return (

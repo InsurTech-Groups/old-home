@@ -32,6 +32,16 @@ function CurrentInsurance({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
+    postData({
+      ...postData,
+      data: {
+        current_policy: {
+          insurance_company: v
+        }
+      }
+      
+    })
+
     navigate('/expired-insurance')
 
     

@@ -28,6 +28,15 @@ function TypeOfHome({postData, sendData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
+    postData({
+      ...postData,
+      properties: [
+        {
+          property_type: v
+        }
+      ]
+    })
+
 
     navigate('/ownership')
   }

@@ -36,6 +36,12 @@ function ExpiredInsurance({postData}) {
     }
 
     else{
+      postData({
+        ...postData.data,
+        current_policy: {
+          expiration_date: expInsurance
+        }
+      })
       navigate('/home-type')
     }  
   

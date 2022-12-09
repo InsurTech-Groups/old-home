@@ -42,6 +42,18 @@ function YearBuilt({postData}) {
     }
     else{
 
+      //write to postData with out overwriting previous data
+
+      postData({
+        ...postData,
+        properties: [
+          {
+            year_built: year
+          }
+        ]
+      })
+  
+
       navigate('/square-footage')
     }
 

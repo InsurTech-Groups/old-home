@@ -28,6 +28,15 @@ function BedRooms({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
+    postData({
+      ...postData,
+      properties: [
+        {
+          occupancy: v
+        }
+      ]
+    })
+
     navigate('/year-built')
 
     

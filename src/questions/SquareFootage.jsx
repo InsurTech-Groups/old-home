@@ -49,6 +49,8 @@ function SquareFootage({ postData }) {
       return
     }
    else{
+    toast.clearWaitingQueue();
+    toast.dismiss();
     setIsButtonDisabled(false)
    }
   }

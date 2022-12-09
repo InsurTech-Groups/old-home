@@ -25,6 +25,15 @@ function Ownership({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
+    postData({
+      ...postData,
+      properties: [
+        {
+          ownership: v
+        }
+      ]
+    })
+
   navigate('/bedrooms')
     
 

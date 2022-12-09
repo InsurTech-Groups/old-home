@@ -32,17 +32,16 @@ export default function App() {
 
   const [postData, setPostData2] = useState({
   
-    
+    meta: {
       originally_created: date,
-      lead_id_code: "4xyz78b9-0cdc-43a7-98ea-2b680a5313a2",
-      trusted_form_cert_url: "https://cert.trustedform.com/f886071...",
+      trusted_form_cert_url: '',
       user_agent: uA,
       landing_page_url: "https://www.home.insurtechgroups.com",
       tcpa_compliant: true,
-      tcpa_consent_text: "I agree to receive to be contacted by phone or email.",
-   
+      tcpa_consent_text: "By clicking Get My Free Quote below, I am agreeing to receive text messages from InsurTech Groups and business partners. I provide my signature expressly consenting to recurring contact from Insurtech Groups or its business partners at the number I provided regarding products or services via live, automated or prerecorded telephone call, text message, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of purchasing property, goods, or services. I understand that I can revoke this consent at any time. Terms & conditions & Privacy policy apply."
+    },
 
-  
+    contact: {
       first_name: "",
       last_name: "",
       email: "",
@@ -51,32 +50,37 @@ export default function App() {
       city: "",
       state: "",
       zip_code: "",
-      ip_address: "",
-   
+      ip_address: ""
+    },
 
-   
+    data: {
       birth_date: "",
       gender: "",
       marital_status: "",
-      
+      properties: [
+        {
+          // TODO: add any home information we are grabbing here
           property_type: "",
           ownership: "",
           occupancy: "",
-       
+          year_built: "",
 
-    
+        }
+      ],
+
+      requested_policy: {
         coverage_type: "",
         liability: "",
         deductible: "",
-        replacement_cost:"",
-   
+        replacement_cost:""
+      },
       
-  
+      current_policy: {
         insurance_company: "",
         expiration_date: "",
         coverage_type: "",
-
-    
+      }
+    }
 
   });
 
@@ -94,7 +98,7 @@ export default function App() {
   // }, [JSON.stringify(postData)]);
 
   const setPostData = (obj) => {
-    console.log("in app state", postData);
+    console.table("in app state", postData);
     setPostData2(obj);
   };
 
@@ -121,6 +125,7 @@ export default function App() {
           element={
             <LandingPage
               postData={setPostDataForPage}
+              
             />
           }
         />
