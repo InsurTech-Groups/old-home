@@ -29,7 +29,11 @@ export default function ThankYou() {
                 Quote!
             </h2>
 
-            <div>
+            <p className="text-white text-md mx-auto pt-5">
+              An agent will be with you shortly to help you get your quote started.
+            </p>
+
+            <div className='pt-10'>
             <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-lg bg-button-purple shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
