@@ -21,6 +21,7 @@ import CreditScore from "./questions/CreditScore";
 import Name from './questions/Name';
 import EmailPhone from "./questions/EmailPhone";
 import ThankYou from './questions/ThankYou'
+import Confirm from "./questions/Confirm";
 
 export default function App() {
 
@@ -257,10 +258,20 @@ export default function App() {
           }
         />
 
-<Route
+        <Route
+          
           path='/email-phone'
           element={
             <EmailPhone
+              postData={setPostDataForPage}
+            />
+          }
+        />
+
+<Route
+          path='/confirm'
+          element={
+            <Confirm
               postData={setPostDataForPage}
             />
           }
