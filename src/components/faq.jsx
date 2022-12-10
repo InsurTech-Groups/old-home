@@ -5,17 +5,17 @@ const faqs = [
   {
     question: "What is Liability?",
     answer:
-      "Bodily injury liability covers medical expenses, pain and suffering, lost wages, and other special damages. Property damage liability covers damaged property, and may include loss of use. Liability coverage pays for damages that occur in an accident when you are at fault. Most importantly, this includes both medical and property costs, and it includes damages suffered by both you and any other parties involved in the accident. Liability insurance is critical because it protects you from lawsuits if you are sued after an accident.",
+      "With the proper coverage, there won't be much to worry about. Let's say someone happens to get injured on your property, the expenses of their injuries can be covered without you having to deal with any of the expenses yourself. Medical bills can get pretty expensive, and with the right coverage, you will not even have to worry about these bills yourself in the chance that an injury may occur on your premise. Get a quote with ITG and see what the best option for you is.",
   },
   {
-    question: "What is Collision Insurance?",
+    question: "What about my expenses?",
     answer:
-      "Collision coverage covers collision with another vehicle, and collision with an object.When you have collision coverage, you receive money to repair or replace your car if you’re involved in an accident—even if the accident is your fault. Most policies require you to pay a specified sum of money toward the repairs first, which is called the “deductible.” Once you’ve met the deductible, the insurance company pays for the rest of the damages.",
+      "Having your home affected by natural disasters or other uncommon events (such as a house fire, flooding, etc.) can be a hassle and could put your living conditions at risk. With the proper coverage the expenses for more suitable living arranges would be covered while the damages to the home are being taken care of. ",
   },
   {
-    question: "What is Personal Injury Protection (PIP)?",
+    question: "Are my personal belongings covered?",
     answer:
-      "This coverage is used to pay for medical expenses caused by a vehicle collision. PIP helps with medical expenses and rehabilitation. ",
+      "No one wants to go through the loss of personal possessions for any reason, but the reality is that these things unfortunately happen whether it'd be from natural disasters, theft, or any other reason and we have to be prepared for that. Make sure your covered with Insurtech Groups today and protect your belongings.",
   },
   
   // More questions...

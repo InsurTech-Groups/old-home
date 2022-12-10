@@ -17,9 +17,9 @@ function EmailPhone({ postData }) {
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
 
-  function editPhoneNumber(e){
-
-    let phoneNumber = e.target.value;
+  function editPhoneNumber(e) {
+    
+    let phoneNumber = document.getElementById('phone_home').value;
     let trim = phoneNumber.trim();
 
     if(phoneNumber === "" || phoneNumber === null || phoneNumber === undefined){
@@ -27,15 +27,11 @@ function EmailPhone({ postData }) {
         setIsButtonDisabled(true);
         return false;
     }
-    if(trim.length === 0 || trim.length < 14){
-        toast.error('Please enter the phone number in a correct format');
-        setIsButtonDisabled(true);
-        return false;
-    }
     
      else{
 setIsButtonDisabled(false)
-        toast.clearWaitingQueue();
+      toast.clearWaitingQueue();
+      setPhone(phoneNumber)
       toast.dismiss()
       
      
@@ -47,20 +43,25 @@ setIsButtonDisabled(false)
 
 
 function editEmail(e){
-    let em = email;
+    let em = e.target.value;
     let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 
-    if(em === "" || em === null || em === undefined || reg.test(em) === false){
+    if(em === "" || em === null || em === undefined){
         toast.error('Please enter a valid email')
-        setIsButtonDisabled(true);
+      setIsButtonDisabled(true);
+      console.log('fail')
+
         return false;
     }
 
     else{
         setIsButtonDisabled(false)
         toast.clearWaitingQueue();
-        toast.dismiss()
+      toast.dismiss()
+      setEmail(em)
+      console.log('success')
+
     }
 }
 
@@ -70,6 +71,7 @@ function nextStep(e){
 
     let em = email;
     let ph = phone;
+    let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 
 
@@ -79,17 +81,21 @@ function nextStep(e){
         toast.error('Please make sure all fields are complete');
         return false
     }
-  
-
+  if (!reg.test(em)) {
+      toast.error('Please enter a valid email');
+      setIsButtonDisabled(true);
+      return false;
+  }
+  if(phone.length === 0 || phone.length < 14){
+    toast.error('Please enter the phone number in a correct format');
+    setIsButtonDisabled(true);
+    return false;
+}
     else{
 
         let tel = phone;
         tel = tel.replace(/\D+/g, "");
-
-
-
         setIsButtonDisabled(false);
-      
       navigate('/confirm')
 
     }
@@ -136,7 +142,6 @@ function nextStep(e){
                             className="w-full mb-5 lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                    
                             onChange={editEmail}
-                            onBlurCapture={setEmail}
 
                   />
 
@@ -148,11 +153,9 @@ function nextStep(e){
                                         id="phone_home"
                                         placeholder="Phone Number"
                                         name="phone_home"
-                                        onBlurCapture={setPhone}
-                                        onChange={editPhoneNumber}
-                                        minLength={14}
-                                        maxLength={14}
-                                        required={true}
+                    onChange={editPhoneNumber}
+                    autoComplete="none"
+                                       
                                     />
 
                   
