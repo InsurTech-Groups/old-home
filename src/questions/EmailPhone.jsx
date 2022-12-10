@@ -90,7 +90,7 @@ function nextStep(e){
 
         setIsButtonDisabled(false);
       
-      navigate('/thank-you')
+      navigate('/confirm')
 
     }
 
