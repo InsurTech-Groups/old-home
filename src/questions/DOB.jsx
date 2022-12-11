@@ -7,10 +7,11 @@ import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
+import { dateOfBirth } from "../utils/updateFirebase";
 
 
 
-function ExpiredInsurance({postData}) {
+function ExpiredInsurance() {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [dateofbirth, setdateofbirth] = useState('')
@@ -46,13 +47,11 @@ function ExpiredInsurance({postData}) {
   
   const validationExpiration = (input) => {
 
-    console.log('input text is: ' +  input)
 
     let currentYear = new Date().getFullYear();
 
     let adultAge = currentYear - 18;
 
-    console.log(adultAge)
 
     let v = input;
 
@@ -62,26 +61,24 @@ function ExpiredInsurance({postData}) {
     // make year a number
     year = parseInt(year);
 
-    console.log('year as int: ' + year)
     toast.clearWaitingQueue();
 
     if (year < 1900 || year > adultAge) {
       toast.error("Please enter a valid year");
-      console.log('year is wrong')
       setIsButtonDisabled(true);
       return;
     }
     if (v.length !== 10) {
       toast.error("Please enter a valid date");
-      console.log('length is wrong')
       setIsButtonDisabled(true)
       return;
 
     }
     else {
       exp = v;
-      console.log('all good')
       setIsButtonDisabled(false);
+
+      dateOfBirth(v)
     }
 
   }

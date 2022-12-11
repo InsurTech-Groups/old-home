@@ -2,7 +2,8 @@ import React from 'react';
 import Lottie from "lottie-react";
 import HomeInsurane from '../assets/HomeInsurance.json';
 import "../styles/forms.css";
-import Agent from '../assets/agent.jpg'
+import Agent from '../assets/agent.jpg';
+import { readFirebase } from '../utils/readFireBase';
 
 
 
@@ -26,12 +27,14 @@ export default function ThankYou() {
               <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
                 Home Insurnace {' '} 
                 </span>
-                Quote!
+                Quote
             </h2>
 
             <p className="text-white text-md mx-auto pt-5">
               An agent will be with you shortly to help you get your quote started.
             </p>
+
+            <button onClick={readFirebase}>Read File</button>
 
             <div className='pt-10'>
             <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />

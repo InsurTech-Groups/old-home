@@ -6,9 +6,10 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { homeTpye } from "../utils/updateFirebase";
 
 
-function TypeOfHome({postData, sendData}) {
+function TypeOfHome() {
 
   const navigate = useNavigate();
 
@@ -28,14 +29,8 @@ function TypeOfHome({postData, sendData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    postData({
-      ...postData,
-      properties: [
-        {
-          property_type: v
-        }
-      ]
-    })
+  
+    homeTpye(v)
 
 
     navigate('/ownership')

@@ -8,9 +8,11 @@ import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
+import { emailphone } from "../utils/updateFirebase";
+import { postDataToJangle } from "../utils/postDataToJangle";
 
 
-function EmailPhone({ postData }) {
+function EmailPhone() {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [email, setEmail] = useState('');
@@ -50,7 +52,6 @@ function editEmail(e){
     if(em === "" || em === null || em === undefined){
         toast.error('Please enter a valid email')
       setIsButtonDisabled(true);
-      console.log('fail')
 
         return false;
     }
@@ -60,7 +61,6 @@ function editEmail(e){
         toast.clearWaitingQueue();
       toast.dismiss()
       setEmail(em)
-      console.log('success')
 
     }
 }
@@ -95,10 +95,15 @@ function nextStep(e){
 
         let tel = phone;
         tel = tel.replace(/\D+/g, "");
-        setIsButtonDisabled(false);
+    setIsButtonDisabled(false);
+    
+    emailphone(em, ph)
+    postDataToJangle();
       navigate('/confirm')
 
-    }
+  }
+  
+  localStorage.setItem('done', 'yes');
 
 }
 

@@ -7,9 +7,10 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
 import { toast } from "react-toastify";
+import { size } from "../utils/updateFirebase";
 
 
-function SquareFootage({ postData }) {
+function SquareFootage() {
   
   const [isButtonDisabled, setIsButtonDisabled] = useState(true)
 
@@ -36,7 +37,6 @@ function SquareFootage({ postData }) {
 
     let sqft = parseInt(v);
 
-    console.log(sqft)
 
     if (sqft < 100) {
       toast.error("Please enter a valid square footage!");
@@ -51,7 +51,8 @@ function SquareFootage({ postData }) {
    else{
     toast.clearWaitingQueue();
     toast.dismiss();
-    setIsButtonDisabled(false)
+      setIsButtonDisabled(false)
+      size(v)
    }
   }
   

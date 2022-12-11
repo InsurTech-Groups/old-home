@@ -6,9 +6,10 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { bedrooms } from "../utils/updateFirebase";
 
 
-function BedRooms({postData}) {
+function BedRooms() {
 
   const navigate = useNavigate();
 
@@ -28,14 +29,7 @@ function BedRooms({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    postData({
-      ...postData,
-      properties: [
-        {
-          occupancy: v
-        }
-      ]
-    })
+    bedrooms(v)
 
     navigate('/year-built')
 
@@ -69,7 +63,7 @@ function BedRooms({postData}) {
           return (
                   <div>
                   <button
-                    key={button.key}
+                    key={button.key.toString()}
                     className="chooseButton bg-input-purple hover:shadow-lg hover:shadow-button-purple/50 hover:transition-transform hover:ease-in-out  hover:bg-button-purple hover:border hover:border-button-purple rounded text-white font-bold"
                     data-value={button.value}
                     value={button.value}

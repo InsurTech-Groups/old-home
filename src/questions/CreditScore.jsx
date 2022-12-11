@@ -6,18 +6,19 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { creditScore } from "../utils/updateFirebase";
 
 
-function CreditScore({postData}) {
+function CreditScore() {
 
   const navigate = useNavigate();
 
 
   let buttons = [
-    { title: '720+', id: '1', value: '1', key: '1' },
-    { title: '680-719', id: '1', value: '1', key: '1' },
-    { title: '580-679', id: '1', value: '1', key: '1' },
-    { title: '579 or Less', id: '1', value: '1', key: '1' },
+    { title: '720+', id: '1', value: '720', key: '1' },
+    { title: '680-719', id: '1', value: '680', key: '1' },
+    { title: '580-679', id: '1', value: '580', key: '1' },
+    { title: '579 or Less', id: '1', value: '400', key: '1' },
 
 	
   ]
@@ -26,6 +27,7 @@ function CreditScore({postData}) {
     
     e.preventDefault();
     let v = e.currentTarget.value;
+    creditScore(v)
 
     navigate('/name')
 

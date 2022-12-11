@@ -6,8 +6,9 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import {LinkWithQuery} from '../components/BackButton'
 import FadeIn from 'react-fade-in';
+import { ownership } from "../utils/updateFirebase";
 
-function Ownership({postData}) {
+function Ownership() {
 
   const navigate = useNavigate();
 
@@ -25,14 +26,8 @@ function Ownership({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    postData({
-      ...postData,
-      properties: [
-        {
-          ownership: v
-        }
-      ]
-    })
+
+    ownership(v)
 
   navigate('/bedrooms')
     

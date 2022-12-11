@@ -6,9 +6,10 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { userGender } from "../utils/updateFirebase";
 
 
-function Gender({postData}) {
+function Gender() {
 
   const navigate = useNavigate();
 
@@ -23,6 +24,8 @@ function Gender({postData}) {
     
     e.preventDefault();
     let v = e.currentTarget.value;
+
+    userGender(v)
 
     navigate('/dob')
 

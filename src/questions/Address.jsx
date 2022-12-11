@@ -7,8 +7,9 @@ import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
 
 import Autocomplete from "react-google-autocomplete";
+import { addressField } from "../utils/updateFirebase";
 
-function Address({postData}) {
+function Address() {
 
   const navigate = useNavigate();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -20,6 +21,8 @@ function Address({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
+
+    addressField(addressValue)
     navigate('/credit')
 
     
@@ -34,11 +37,11 @@ function Address({postData}) {
     }
     else{
         setIsButtonDisabled(false)
-        setAddressValue(addressValue)
         if (addressValue == undefined ){
             setAddressValue("123 Main Street")
         }else{
-            setAddressValue(addressValue)
+          
+    addressField(address)
         }
     }
 }
@@ -80,7 +83,6 @@ function Address({postData}) {
                   onChange={isEdit}
                   
                                     required={true}
-                                    onBlur={setAddressValue}
                                     onPlaceSelected = {
                                         (place) => {
 
@@ -99,15 +101,15 @@ function Address({postData}) {
 
                                           if (typeof streetNumber === 'undefined') {
                                             let string = route;
-                                            setAddressValue(string);
                                           } else {
                                             let string = streetNumber + " " + route;
-                                            setAddressValue(string);
                                           }
 
                                           let botttomText = locality + ", " + state;
                                           setBottomText(botttomText)
                                           setIsButtonDisabled(false)
+                                          setAddressValue(streetNumber + " " + route + ", " + locality + ", " + state)
+                                         
 
                                     }}
                                    options= {{
