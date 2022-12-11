@@ -109,29 +109,21 @@ function ZipCode({postData}) {
     }
     else { 
 
-      updatededProps();
+      postData({
+        
+        ...postData.contact,
+        contact: {
+          zipCode: zipCodeValue,  
+          city: cityValue,
+          state: stateValue
+       }
+
+      })
+      navigate('/insurance-status');
     }
 
   }
 
-  const updatededProps = () => {
-
-    postData(current => {
-
-      return{
-        ...current,
-        contact: {
-          ...current.contact, 
-          city: cityValue,
-          state: stateValue,
-          zip_code: zipCodeValue
-        }
-      }
-      
-    })
-    navigate('/insurance-status');
-
-  }
 
   
 

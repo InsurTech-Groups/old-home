@@ -31,13 +31,13 @@ function InsuranceStatus({postData}) {
 
       postData({
         ...postData,
-       data: {
-        current_policy: {
-          insurance_company: 'None',
-          expiration_date: 'None',
+        data: {
+          ...postData.data,
+          current_policy: {
+            insurance_company: "None",
+            
+          }
         }
-       }
-        
       })
 
       navigate('/home-type')

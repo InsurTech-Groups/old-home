@@ -106,7 +106,8 @@ export default function App() {
   const setPostDataForPage = (data) => {
   
   setPostData((prev) => {
-    return { ...prev, ...data };  
+    return { ...prev, ...data };
+  
   });
 
   };
@@ -126,7 +127,7 @@ export default function App() {
           element={
             <LandingPage
               postData={setPostDataForPage}
-              
+     
             />
           }
         />
