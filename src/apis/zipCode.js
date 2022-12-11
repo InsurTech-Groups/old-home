@@ -3,16 +3,45 @@ import $ from 'jquery';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import axios from 'axios';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import {collection, addDoc, onSnapshot} from "firebase/firestore";
+import { db } from '../config/firebaseConfig'
+import { initialFirebaseFormValues } from '../utils/updateFirebase';
+import { v4 as uuidv4 } from 'uuid';
 
 function ZipCode({postData}) {
 
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [userId, setUserId] = useState('');
   const [zipCodeValue, setZipCodeValue] = useState('');
   const [cityValue, setCityValue] = useState('');
   const [stateValue, setStateValue] = useState('');
+ 
   const navigate = useNavigate();
+
+
+
+  useEffect(() => {
+
+    let id = localStorage.getItem('userId');
+    let final = localStorage.getItem('done')
+
+    if (!id) {
+      localStorage.setItem('userId', uuidv4());
+
+    }
+    if (final === 'yes') {
+
+      toast.success('Thank you for your submission!');
+
+      navigate('/thank-you')
+    }
+    
+  }, [])
+  
+
+
 
 
   useEffect(() => {
@@ -43,6 +72,7 @@ function ZipCode({postData}) {
     })
 
   }, []);
+
 
 
 
@@ -84,9 +114,11 @@ function ZipCode({postData}) {
 
   }
 
-  function nextStep(e) {
+  function nextStep(e){
 
     e.preventDefault();
+
+    let id = localStorage.getItem('userId');
 
     let zip = zipCodeValue;
 
@@ -109,20 +141,16 @@ function ZipCode({postData}) {
     }
     else { 
 
-      postData({
-        
-        ...postData.contact,
-        contact: {
-          zipCode: zipCodeValue,  
-          city: cityValue,
-          state: stateValue
-       }
+      
 
-      })
+      initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue);
+  
       navigate('/insurance-status');
     }
 
   }
+
+  
 
 
   
@@ -168,6 +196,10 @@ function ZipCode({postData}) {
           </button>
         </div>
         <p className='text-white font-extrabold text-md pt-2 pb-2' id='location'>Savings Available In <span className=' font-thin bg-gradient-to-r text-lg rounded-lg pl-2 pr-2 from-purple-400 to-pink-600'>{cityValue}, {stateValue} </span></p>
+
+        
+
+        {}
       </form>
     </div>
   )

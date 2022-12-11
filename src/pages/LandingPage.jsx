@@ -18,8 +18,7 @@ function LandingPage({postData}) {
     },
     {
       name: 'Getting A Quote Is Fast And Easy',
-      description:
-        'Fill out a form takes less than 3 minutes, it is quick and easy!',
+      description: 'Fill out a form takes less than 3 minutes, it is quick and easy!',
       icon: ScaleIcon,
     },
     {

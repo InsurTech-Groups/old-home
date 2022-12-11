@@ -6,9 +6,10 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { claims } from "../utils/updateFirebase";
 
 
-function Claims({postData}) {
+function Claims() {
 
   const navigate = useNavigate();
 
@@ -22,6 +23,8 @@ function Claims({postData}) {
     
     e.preventDefault();
     let v = e.currentTarget.value;
+
+    claims(v)
 
     navigate('/address')
 

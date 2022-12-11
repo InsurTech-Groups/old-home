@@ -7,10 +7,11 @@ import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
+import { built } from "../utils/updateFirebase";
 
 
 
-function YearBuilt({postData}) {
+function YearBuilt() {
 
   
 
@@ -42,16 +43,8 @@ function YearBuilt({postData}) {
     }
     else{
 
-      //write to postData with out overwriting previous data
-
-      postData({
-        ...postData,
-        properties: [
-          {
-            year_built: year
-          }
-        ]
-      })
+     
+      built(year)
   
 
       navigate('/square-footage')

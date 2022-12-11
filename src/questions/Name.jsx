@@ -7,10 +7,11 @@ import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
+import { names } from "../utils/updateFirebase";
 
 
 
-function ExpiredInsurance({ postData }) {
+function ExpiredInsurance() {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [firstName, setFirstName] = useState('');
@@ -33,7 +34,9 @@ function ExpiredInsurance({ postData }) {
       setIsButtonDisabled(true)
       return
     }
-    else{
+    else {
+      
+      names(firstName, lastName)
   
       navigate('/email-phone')
     }

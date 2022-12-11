@@ -6,9 +6,10 @@ import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import FadeIn from 'react-fade-in';
+import { currentInsurance } from "../utils/updateFirebase";
 
 
-function CurrentInsurance({postData}) {
+function CurrentInsurance() {
 
   const navigate = useNavigate();
 
@@ -32,16 +33,9 @@ function CurrentInsurance({postData}) {
     e.preventDefault();
     let v = e.currentTarget.value;
 
-    postData({
-      ...postData,
-      data: {
-        current_policy: {
-          insurance_company: v
-        }
-      }
-      
-    })
 
+
+currentInsurance(v)
     navigate('/expired-insurance')
 
     
