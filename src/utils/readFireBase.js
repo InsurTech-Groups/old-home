@@ -6,6 +6,7 @@ import { db } from '../config/firebaseConfig'
 
 export const readFirebase = async () => {
 
+
  let userData = {
     address: '',
     bedrooms: '',
@@ -42,6 +43,7 @@ export const readFirebase = async () => {
 
     let data = docSnap.data(); 
 
+
     userData.address = data.address
     userData.bedrooms = data.bedrooms
     userData.city = data.city
@@ -62,10 +64,6 @@ export const readFirebase = async () => {
     userData.sqft = data.square_feet_size
     userData.state = data.state
     userData.zipcode = data.zipcode
-    
-
-    
-    console.log('caca: ', userData)
 
 
   } else {

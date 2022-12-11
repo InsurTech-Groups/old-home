@@ -34,8 +34,6 @@ export default function ThankYou() {
               An agent will be with you shortly to help you get your quote started.
             </p>
 
-          
-
             <div className='pt-10'>
             <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
