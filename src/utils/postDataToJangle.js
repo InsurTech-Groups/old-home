@@ -114,7 +114,7 @@ export const postDataToJangle = async () => {
         toast.success('Form Submitted')
       })
       .catch((error) => {
-        toast.error('Form Not Submitted')
+        toast.error('Error in submitting your form!')
       });
     
   } else {
