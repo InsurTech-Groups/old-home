@@ -24,6 +24,7 @@ import EmailPhone from "./questions/EmailPhone";
 import ThankYou from "./questions/ThankYou";
 import Confirm from "./questions/Confirm";
 
+
 export default function App() {
   return (
     <div>
@@ -64,6 +65,8 @@ export default function App() {
         <Route path="/confirm" element={<Confirm />} />
 
         <Route path="/thank-you" element={<ThankYou />} />
+
+
       </Routes>
       <Footer />
     </div>

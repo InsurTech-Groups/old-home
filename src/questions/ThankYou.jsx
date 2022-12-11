@@ -34,7 +34,7 @@ export default function ThankYou() {
               An agent will be with you shortly to help you get your quote started.
             </p>
 
-            <button onClick={readFirebase}>Read File</button>
+          
 
             <div className='pt-10'>
             <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />

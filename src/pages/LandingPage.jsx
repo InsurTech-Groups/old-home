@@ -45,7 +45,7 @@ function LandingPage({postData}) {
             <p className="mx-auto mt-3 max-w-md text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">
               Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for home insurance has never been easier.
             </p>
-            <ZipCode postData={postData} />
+              <ZipCode postData={postData} />
           </div>
         </div>
         <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
