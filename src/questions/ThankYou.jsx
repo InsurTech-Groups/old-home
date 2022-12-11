@@ -26,7 +26,7 @@ export default function ThankYou() {
               <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
                 Home Insurnace {' '} 
                 </span>
-                Quote!
+                Quote
             </h2>
 
             <p className="text-white text-md mx-auto pt-5">
