@@ -1,0 +1,55 @@
+"filename", "language", "JavaScript", "JSON", "Markdown", "HTML", "CSS", "JavaScript React", "XML", "Properties", "comment", "blank", "total"
+"c:\Users\Owner\Desktop\homeinsuranceform\.env", "Properties", 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 11
+"c:\Users\Owner\Desktop\homeinsuranceform\README.md", "Markdown", 0, 0, 39, 0, 0, 0, 0, 0, 0, 33, 72
+"c:\Users\Owner\Desktop\homeinsuranceform\package-lock.json", "JSON", 0, 35215, 0, 0, 0, 0, 0, 0, 0, 1, 35216
+"c:\Users\Owner\Desktop\homeinsuranceform\package.json", "JSON", 0, 77, 0, 0, 0, 0, 0, 0, 0, 1, 78
+"c:\Users\Owner\Desktop\homeinsuranceform\postcss.config.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\Owner\Desktop\homeinsuranceform\public\index.html", "HTML", 0, 0, 0, 15, 0, 0, 0, 0, 0, 1, 16
+"c:\Users\Owner\Desktop\homeinsuranceform\public\manifest.json", "JSON", 0, 25, 0, 0, 0, 0, 0, 0, 0, 1, 26
+"c:\Users\Owner\Desktop\homeinsuranceform\src\App.js", "JavaScript", 56, 0, 0, 0, 0, 0, 0, 0, 0, 19, 75
+"c:\Users\Owner\Desktop\homeinsuranceform\src\apis\Twilio.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\apis\zipCode.js", "JavaScript", 134, 0, 0, 0, 0, 0, 0, 0, 0, 73, 207
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\Confirm.json", "JSON", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\HomeInsurance.json", "JSON", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\Loader.json", "JSON", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\car.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\sending.json", "JSON", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\assets\thankyou.json", "JSON", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\BackButton.jsx", "JavaScript React", 0, 0, 0, 0, 0, 28, 0, 0, 0, 4, 32
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\CTA.jsx", "JavaScript React", 0, 0, 0, 0, 0, 21, 0, 0, 0, 2, 23
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\Footer.jsx", "JavaScript React", 0, 0, 0, 0, 0, 72, 0, 0, 0, 6, 78
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\NavBar.jsx", "JavaScript React", 0, 0, 0, 0, 0, 25, 0, 0, 0, 11, 36
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\ProgressBar.jsx", "JavaScript React", 0, 0, 0, 0, 0, 22, 0, 0, 0, 5, 27
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\Skeleton.jsx", "JavaScript React", 0, 0, 0, 0, 0, 7, 0, 0, 0, 1, 8
+"c:\Users\Owner\Desktop\homeinsuranceform\src\components\faq.jsx", "JavaScript React", 0, 0, 0, 0, 0, 59, 0, 0, 1, 6, 66
+"c:\Users\Owner\Desktop\homeinsuranceform\src\config\firebaseConfig.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 0, 9, 31
+"c:\Users\Owner\Desktop\homeinsuranceform\src\index.css", "CSS", 0, 0, 0, 0, 23, 0, 0, 0, 0, 3, 26
+"c:\Users\Owner\Desktop\homeinsuranceform\src\index.js", "JavaScript", 11, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\Users\Owner\Desktop\homeinsuranceform\src\pages\LandingPage.jsx", "JavaScript React", 0, 0, 0, 0, 0, 77, 0, 0, 0, 7, 84
+"c:\Users\Owner\Desktop\homeinsuranceform\src\pages\SignUp.jsx", "JavaScript React", 0, 0, 0, 0, 0, 84, 0, 0, 0, 6, 90
+"c:\Users\Owner\Desktop\homeinsuranceform\src\pages\UserPage.jsx", "JavaScript React", 0, 0, 0, 0, 0, 611, 0, 0, 14, 11, 636
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Address.jsx", "JavaScript React", 0, 0, 0, 0, 0, 107, 0, 0, 0, 44, 151
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Bedrooms.jsx", "JavaScript React", 0, 0, 0, 0, 0, 64, 0, 0, 0, 30, 94
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Claims.jsx", "JavaScript React", 0, 0, 0, 0, 0, 60, 0, 0, 0, 29, 89
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Confirm.jsx", "JavaScript React", 0, 0, 0, 0, 0, 35, 0, 0, 1, 26, 62
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\CreditScore.jsx", "JavaScript React", 0, 0, 0, 0, 0, 62, 0, 0, 0, 30, 92
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\CurrentInsurance.jsx", "JavaScript React", 0, 0, 0, 0, 0, 64, 0, 0, 0, 35, 99
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\DOB.jsx", "JavaScript React", 0, 0, 0, 0, 0, 164, 0, 0, 2, 56, 222
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\EmailPhone.jsx", "JavaScript React", 0, 0, 0, 0, 0, 143, 0, 0, 1, 54, 198
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\ExpiredInsurance.jsx", "JavaScript React", 0, 0, 0, 0, 0, 162, 0, 0, 1, 53, 216
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Gender.jsx", "JavaScript React", 0, 0, 0, 0, 0, 61, 0, 0, 0, 29, 90
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\InsuranceStatus.jsx", "JavaScript React", 0, 0, 0, 0, 0, 65, 0, 0, 0, 34, 99
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Name.jsx", "JavaScript React", 0, 0, 0, 0, 0, 100, 0, 0, 0, 35, 135
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Ownership.jsx", "JavaScript React", 0, 0, 0, 0, 0, 59, 0, 0, 1, 31, 91
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\SquareFootage.jsx", "JavaScript React", 0, 0, 0, 0, 0, 96, 0, 0, 0, 30, 126
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\ThankYou.jsx", "JavaScript React", 0, 0, 0, 0, 0, 60, 0, 0, 2, 22, 84
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\TypeOfHome.jsx", "JavaScript React", 0, 0, 0, 0, 0, 62, 0, 0, 0, 30, 92
+"c:\Users\Owner\Desktop\homeinsuranceform\src\questions\YearBuilt.jsx", "JavaScript React", 0, 0, 0, 0, 0, 105, 0, 0, 3, 50, 158
+"c:\Users\Owner\Desktop\homeinsuranceform\src\styles\LandingPage.css", "CSS", 0, 0, 0, 0, 8, 0, 0, 0, 0, 3, 11
+"c:\Users\Owner\Desktop\homeinsuranceform\src\styles\font.css", "CSS", 0, 0, 0, 0, 36, 0, 0, 0, 0, 10, 46
+"c:\Users\Owner\Desktop\homeinsuranceform\src\styles\forms.css", "CSS", 0, 0, 0, 0, 97, 0, 0, 0, 0, 26, 123
+"c:\Users\Owner\Desktop\homeinsuranceform\src\utils\postDataToJangle.js", "JavaScript", 91, 0, 0, 0, 0, 0, 0, 0, 9, 27, 127
+"c:\Users\Owner\Desktop\homeinsuranceform\src\utils\readFireBase.js", "JavaScript", 57, 0, 0, 0, 0, 0, 0, 0, 1, 19, 77
+"c:\Users\Owner\Desktop\homeinsuranceform\src\utils\updateFirebase.js", "JavaScript", 183, 0, 0, 0, 0, 0, 0, 0, 0, 36, 219
+"c:\Users\Owner\Desktop\homeinsuranceform\tailwind.config.js", "JavaScript", 39, 0, 0, 0, 0, 0, 0, 0, 0, 9, 48
+"Total", "-", 599, 35322, 39, 15, 164, 2475, 1, 11, 36, 954, 39616

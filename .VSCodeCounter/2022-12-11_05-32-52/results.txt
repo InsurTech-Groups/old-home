@@ -1,0 +1,94 @@
+Date : 2022-12-11 05:32:52
+Directory : c:\Users\Owner\Desktop\homeinsuranceform
+Total : 53 files,  38626 codes, 36 comments, 954 blanks, all 39616 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          8 |     35,322 |          0 |          3 |     35,325 |
+| JavaScript React |         27 |      2,475 |         26 |        677 |      3,178 |
+| JavaScript       |         10 |        599 |         10 |        198 |        807 |
+| CSS              |          4 |        164 |          0 |         42 |        206 |
+| Markdown         |          1 |         39 |          0 |         33 |         72 |
+| HTML             |          1 |         15 |          0 |          1 |         16 |
+| Properties       |          1 |         11 |          0 |          0 |         11 |
+| XML              |          1 |          1 |          0 |          0 |          1 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                        | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                           |         53 |     38,626 |         36 |        954 |     39,616 |
+| public                                                                      |          2 |         40 |          0 |          2 |         42 |
+| src                                                                         |         45 |      3,199 |         36 |        907 |      4,142 |
+| src\apis                                                                    |          2 |        134 |          0 |         74 |        208 |
+| src\assets                                                                  |          6 |          6 |          0 |          0 |          6 |
+| src\components                                                              |          7 |        234 |          1 |         35 |        270 |
+| src\config                                                                  |          1 |         22 |          0 |          9 |         31 |
+| src\pages                                                                   |          3 |        772 |         14 |         24 |        810 |
+| src\questions                                                               |         17 |      1,469 |         11 |        618 |      2,098 |
+| src\styles                                                                  |          3 |        141 |          0 |         39 |        180 |
+| src\utils                                                                   |          3 |        331 |         10 |         82 |        423 |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                    | language         | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\Owner\Desktop\homeinsuranceform\.env                               | Properties       |         11 |          0 |          0 |         11 |
+| c:\Users\Owner\Desktop\homeinsuranceform\README.md                          | Markdown         |         39 |          0 |         33 |         72 |
+| c:\Users\Owner\Desktop\homeinsuranceform\package-lock.json                  | JSON             |     35,215 |          0 |          1 |     35,216 |
+| c:\Users\Owner\Desktop\homeinsuranceform\package.json                       | JSON             |         77 |          0 |          1 |         78 |
+| c:\Users\Owner\Desktop\homeinsuranceform\postcss.config.js                  | JavaScript       |          6 |          0 |          1 |          7 |
+| c:\Users\Owner\Desktop\homeinsuranceform\public\index.html                  | HTML             |         15 |          0 |          1 |         16 |
+| c:\Users\Owner\Desktop\homeinsuranceform\public\manifest.json               | JSON             |         25 |          0 |          1 |         26 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\App.js                         | JavaScript       |         56 |          0 |         19 |         75 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\apis\Twilio.js                 | JavaScript       |          0 |          0 |          1 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\apis\zipCode.js                | JavaScript       |        134 |          0 |         73 |        207 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\Confirm.json            | JSON             |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\HomeInsurance.json      | JSON             |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\Loader.json             | JSON             |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\car.svg                 | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\sending.json            | JSON             |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\assets\thankyou.json           | JSON             |          1 |          0 |          0 |          1 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\BackButton.jsx      | JavaScript React |         28 |          0 |          4 |         32 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\CTA.jsx             | JavaScript React |         21 |          0 |          2 |         23 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\Footer.jsx          | JavaScript React |         72 |          0 |          6 |         78 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\NavBar.jsx          | JavaScript React |         25 |          0 |         11 |         36 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\ProgressBar.jsx     | JavaScript React |         22 |          0 |          5 |         27 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\Skeleton.jsx        | JavaScript React |          7 |          0 |          1 |          8 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\components\faq.jsx             | JavaScript React |         59 |          1 |          6 |         66 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\config\firebaseConfig.js       | JavaScript       |         22 |          0 |          9 |         31 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\index.css                      | CSS              |         23 |          0 |          3 |         26 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\index.js                       | JavaScript       |         11 |          0 |          4 |         15 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\pages\LandingPage.jsx          | JavaScript React |         77 |          0 |          7 |         84 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\pages\SignUp.jsx               | JavaScript React |         84 |          0 |          6 |         90 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\pages\UserPage.jsx             | JavaScript React |        611 |         14 |         11 |        636 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Address.jsx          | JavaScript React |        107 |          0 |         44 |        151 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Bedrooms.jsx         | JavaScript React |         64 |          0 |         30 |         94 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Claims.jsx           | JavaScript React |         60 |          0 |         29 |         89 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Confirm.jsx          | JavaScript React |         35 |          1 |         26 |         62 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\CreditScore.jsx      | JavaScript React |         62 |          0 |         30 |         92 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\CurrentInsurance.jsx | JavaScript React |         64 |          0 |         35 |         99 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\DOB.jsx              | JavaScript React |        164 |          2 |         56 |        222 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\EmailPhone.jsx       | JavaScript React |        143 |          1 |         54 |        198 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\ExpiredInsurance.jsx | JavaScript React |        162 |          1 |         53 |        216 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Gender.jsx           | JavaScript React |         61 |          0 |         29 |         90 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\InsuranceStatus.jsx  | JavaScript React |         65 |          0 |         34 |         99 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Name.jsx             | JavaScript React |        100 |          0 |         35 |        135 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\Ownership.jsx        | JavaScript React |         59 |          1 |         31 |         91 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\SquareFootage.jsx    | JavaScript React |         96 |          0 |         30 |        126 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\ThankYou.jsx         | JavaScript React |         60 |          2 |         22 |         84 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\TypeOfHome.jsx       | JavaScript React |         62 |          0 |         30 |         92 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\questions\YearBuilt.jsx        | JavaScript React |        105 |          3 |         50 |        158 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\styles\LandingPage.css         | CSS              |          8 |          0 |          3 |         11 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\styles\font.css                | CSS              |         36 |          0 |         10 |         46 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\styles\forms.css               | CSS              |         97 |          0 |         26 |        123 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\utils\postDataToJangle.js      | JavaScript       |         91 |          9 |         27 |        127 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\utils\readFireBase.js          | JavaScript       |         57 |          1 |         19 |         77 |
+| c:\Users\Owner\Desktop\homeinsuranceform\src\utils\updateFirebase.js        | JavaScript       |        183 |          0 |         36 |        219 |
+| c:\Users\Owner\Desktop\homeinsuranceform\tailwind.config.js                 | JavaScript       |         39 |          0 |          9 |         48 |
+| Total                                                                       |                  |     38,626 |         36 |        954 |     39,616 |
++-----------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

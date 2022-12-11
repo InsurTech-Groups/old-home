@@ -24,6 +24,7 @@ import EmailPhone from "./questions/EmailPhone";
 import ThankYou from "./questions/ThankYou";
 import Confirm from "./questions/Confirm";
 
+
 export default function App() {
   return (
     <div>
@@ -32,6 +33,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
+
 
         <Route path="/insurance-status" element={<InsuranceStatus />} />
 
@@ -64,6 +66,40 @@ export default function App() {
         <Route path="/confirm" element={<Confirm />} />
 
         <Route path="/thank-you" element={<ThankYou />} />
+
+
+        <Route path="/insurance-status" element={<InsuranceStatus />} />
+
+        <Route path="/current-insurance" element={<CurrentInsurance />} />
+
+        <Route path="/expired-insurance" element={<ExpiredInsurance />} />
+
+        <Route path="/home-type" element={<TypeOfHome />} />
+
+        <Route path="/ownership" element={<Ownership />} />
+
+        <Route path="/bedrooms" element={<BedRooms />} />
+
+        <Route path="/year-built" element={<YearBuilt />} />
+        <Route path="/square-footage" element={<SquareFootage />} />
+
+        <Route path="/gender" element={<Gender />} />
+
+        <Route path="/dob" element={<DOB />} />
+
+        <Route path="/address" element={<Address />} />
+
+        <Route path="/claims" element={<Claims />} />
+        <Route path="/credit" element={<CreditScore />} />
+
+        <Route path="/name" element={<Name />} />
+
+        <Route path="/email-phone" element={<EmailPhone />} />
+
+        <Route path="/confirm" element={<Confirm />} />
+
+        <Route path="/thank-you" element={<ThankYou />} />
+
       </Routes>
       <Footer />
     </div>
