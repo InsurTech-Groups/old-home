@@ -1,5 +1,5 @@
 
-import { userInfo } from "../utils/updateFirebase";
+
 export const ipAddress = async (ip) => {
 
   let apiKey = process.env.REACT_APP_IP_API_KEY;
@@ -12,11 +12,12 @@ export const ipAddress = async (ip) => {
   console.log(url)
   //make a fetch request
   fetch(url)
+
     .then(response => {
       response.json();
 
       console.log(response.body)
 
-      userInfo();
+      
     });
 }

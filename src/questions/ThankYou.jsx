@@ -34,6 +34,34 @@ export default function ThankYou() {
               An agent will be with you shortly to help you get your quote started.
             </p>
 
+            <div class="grid grid-cols-2 gap-2 text-center w-1/2 mx-auto justify-center">
+              <div>
+              <a
+                href="https://insurtechgroups.com"
+                className="mt-8 inline-flex items-center rounded-md border border-transparent bg-button-purple px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-50 hover:text-button-purple"
+              >
+                Visit Us
+
+                
+                
+                             </a>
+  </div>
+              <div>
+              <a
+                  href="/"
+                  onClick={() => {
+                    localStorage.clear();
+                  }}
+                className="mt-8 inline-flex items-center rounded-md border border-transparent bg-input-purple px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-50 hover:text-button-purple"
+              >
+                Restart the form
+
+                
+                
+                             </a>
+  </div>
+</div>
+
             <div className='pt-10'>
             <Lottie animationData={HomeInsurane} loop={true} style={{height: '500px'}} />
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">

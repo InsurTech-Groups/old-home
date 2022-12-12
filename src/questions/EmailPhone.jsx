@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
 import { emailphone } from "../utils/updateFirebase";
 import { postDataToJangle } from "../utils/postDataToJangle";
+import axios from "axios";
 
 
 function EmailPhone() {
@@ -17,6 +18,7 @@ function EmailPhone() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [areBothValid, setAreBothValid] = useState(0)
   const navigate = useNavigate();
 
   function editPhoneNumber(e) {
@@ -62,6 +64,7 @@ function editEmail(e){
       toast.dismiss()
       setEmail(em)
 
+
     }
 }
 
@@ -98,16 +101,108 @@ function nextStep(e){
     setIsButtonDisabled(false);
     
     emailphone(em, ph)
-    postDataToJangle();
+   
+    console.log('checking email')
+    checkEmail(em)
+    console.log('email was success, checking phone now')
+    checkPhone(phone)
+    console.log('phone was success, posting to jangle now')
+
+    localStorage.setItem('done', 'yes');
+    
+    if (isButtonDisabled) {
+      return
+    }
+    else {
+      console.log("IM POSTING")
+      postDataToJangle();
       navigate('/confirm')
+    }
 
   }
+
   
-  localStorage.setItem('done', 'yes');
+  
+  }
 
-}
+
+  const checkEmail = (em) => {
+    axios.get(`https://emailvalidation.abstractapi.com/v1/?api_key=9a7f85375faa421ba7e1d959415f40ed&email=${em}`)
+    .then(response => {
+      
+      let data = response.data;
+      if (data.deliverability === "UNDELIVERABLE" || data.deliverability === "UNKNOWN") {
+        toast.error("Please enter a valid email address!");
+        console.log('email wrong')
+
+        setIsButtonDisabled(true)
+        return false
+      }
+      if (data.is_valid_format === false) {
+        toast.error("Please enter a valid email address!");
+      
+        console.log('email wrong')
+        setIsButtonDisabled(true)
+        return false
+      }
+      if (data.is_disposable_email === true) {
+        toast.error("Please enter a valid email address!");
+        setIsButtonDisabled(true)
+        console.log('email wrong')
+        return false
+
+      }
+      else {
+        toast.dismiss();
+        console.log('success')
+        toast.clearWaitingQueue();
+        console.log('email right')
+
+       // buttonDisabled(false);
+      
+      }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+    return console.log('ended')
+
+   // postDataToJangle();
+      //navigate('/confirm')
+
+  }
+
+  const checkPhone = (tel) => {
 
 
+    axios.get(`https://phonevalidation.abstractapi.com/v1/?api_key=75f89b138e344044ab0f3cd7ef56af67&phone=1${tel}`)
+    .then(response => {
+      let data = response.data;
+      
+      if (data.valid) {
+        toast.error('Please enter a valid phone number');
+        setIsButtonDisabled(true)
+        return
+      }
+      if (data.code !== 'US') {
+        toast.error('Please enter a valid phone number');
+        setIsButtonDisabled(true)
+        return
+      }
+      else {
+        toast.dismiss();
+        toast.clearWaitingQueue();
+      }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+
+    return console.log('phone valid')
+
+  }
   // get todays date
   return (
     <div className="bg-dark-purple pb-10">

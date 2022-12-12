@@ -30,9 +30,26 @@ export const initialFirebaseFormValues = async (id, zipCode, city, state, ip) =>
 
 }
 
-export const userInfo = async () => {
+export const trustedFormURL = (url) => {
+
+  const id = localStorage.getItem('userId');
+
+console.log('the url is, ', url)
+
+  userData.trusted_form_cert_url = url;
+  
+  const docRef = doc(db, 'forms', id); 
+  console.log('init firebase run')
+  const payload = {
+  trustedFormURL: url
+  }
+  setDoc(docRef, payload)
+
+
 
 }
+
+
 
 export const noInsurance = async (company, expires) => {
   const id = localStorage.getItem('userId');

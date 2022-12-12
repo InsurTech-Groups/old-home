@@ -8,6 +8,7 @@ import {collection, addDoc, onSnapshot} from "firebase/firestore";
 import { db } from '../config/firebaseConfig'
 import { initialFirebaseFormValues } from '../utils/updateFirebase';
 import { v4 as uuidv4 } from 'uuid';
+import { trustedFormURL } from '../utils/updateFirebase';
 
 function ZipCode({postData}) {
 
@@ -149,6 +150,10 @@ function ZipCode({postData}) {
       
 
       initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
+
+      let url = document.getElementById('trusted_form_url_0').value;
+
+       trustedFormURL(url)
   
       navigate('/insurance-status');
     }

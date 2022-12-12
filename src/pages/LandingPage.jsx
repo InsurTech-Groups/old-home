@@ -6,12 +6,15 @@ import ZipCode from '../apis/zipCode'
 import FAQ from "../components/faq";
 import FadeIn from 'react-fade-in';
 import { ipAddress } from "../apis/ipCollection";
+import { trustedForm } from "../apis/trustedForm";
+import { trustedFormURL } from "../utils/updateFirebase";
 
 function LandingPage() {
   
 
   useEffect(() => {
     ipAddress();
+    trustedForm();
   }, [])
   
 
