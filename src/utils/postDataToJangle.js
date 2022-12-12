@@ -7,7 +7,6 @@ export const postDataToJangle = async () => {
 
 
   //TODO
-  // 1. get users valid ip address
   // 2. change state from full spelling to Abbrevation
   // 3. change DOB to YYYY/MM/DD
   // 4. Change policy expiration to YYYY/MM/DD
@@ -77,6 +76,8 @@ export const postDataToJangle = async () => {
     let data = docSnap.data();
     postData.meta.originally_created = new Date().getDate;
     postData.meta.user_agent = data.user_agent;
+
+    postData.contact.ip_address = data.ip
 
     postData.contact.first_name = data.first_name
     postData.contact.last_name = data.last_name

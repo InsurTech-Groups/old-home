@@ -11,10 +11,10 @@ export default function CTA() {
           Get a quote over the phone! We have agents standing by to answer your questions and get you a free quote for your home insurance today! 
         </p>
         <a
-          href="#"
+          href="tel:18559071606"
           className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-button-purple px-5 py-3 text-base font-medium text-white  sm:w-auto"
         >
-          (888) 123-45678
+          	(855) 907-1606
         </a>
       </div>
     </div>
