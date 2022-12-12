@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect} from "react";
 import "../styles/LandingPage.css";
 import LandingHeaderPic from "../assets/homeLanding.jpg";
 import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
 import ZipCode from '../apis/zipCode'
 import FAQ from "../components/faq";
 import FadeIn from 'react-fade-in';
+import { ipAddress } from "../apis/ipCollection";
 
-function LandingPage({postData}) {
+function LandingPage() {
+  
 
+  useEffect(() => {
+    ipAddress();
+  }, [])
+  
 
   const features = [
     {
@@ -45,7 +51,7 @@ function LandingPage({postData}) {
             <p className="mx-auto mt-3 max-w-md text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">
               Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for home insurance has never been easier.
             </p>
-              <ZipCode postData={postData} />
+              <ZipCode />
           </div>
         </div>
         <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">

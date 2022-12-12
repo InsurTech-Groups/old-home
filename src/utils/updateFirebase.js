@@ -1,11 +1,12 @@
 
 import {doc, setDoc, Timestamp} from "firebase/firestore";
 import { db } from '../config/firebaseConfig'
+import { userData } from "./userInfo";
 
 
 
 
-export const initialFirebaseFormValues = async (id, zipCode, city, state) => {
+export const initialFirebaseFormValues = async (id, zipCode, city, state, ip) => {
   const docRef = doc(db, 'forms', id); 
   console.log('init firebase run')
   const payload = {
@@ -15,8 +16,22 @@ export const initialFirebaseFormValues = async (id, zipCode, city, state) => {
     state: state, 
     date: Timestamp.fromDate(new Date()),
     user_agent: navigator.userAgent,
+    ip_address: ip
   }
   setDoc(docRef, payload)
+
+  userData.id = id;
+  userData.zip_code = zipCode;
+  userData.city = city;
+  userData.state = state;
+  userData.ip_address = ip; 
+
+  console.log('the user data is, ', userData)
+
+}
+
+export const userInfo = async () => {
+
 }
 
 export const noInsurance = async (company, expires) => {
@@ -31,6 +46,11 @@ export const noInsurance = async (company, expires) => {
     {
       merge: true
     });
+  
+  userData.insurance_company = company;
+  userData.expiration_date = expires;
+  console.log('the user data is, ', userData)
+
 }
 
 export const currentInsurance = async (company) => {
@@ -44,6 +64,10 @@ export const currentInsurance = async (company) => {
     {
       merge: true
     });
+  
+  userData.insurance_company = company;
+  console.log('the user data is, ', userData)
+
 };
 
 export const expiredInsurance = async (expires) => {
@@ -57,6 +81,10 @@ export const expiredInsurance = async (expires) => {
     {
       merge: true
     });
+  
+  userData.expiration_date = expires
+  console.log('the user data is, ', userData)
+
 };
 
 export const homeTpye = async (homeType) => {
@@ -70,6 +98,10 @@ export const homeTpye = async (homeType) => {
     {
       merge: true
     });
+  
+  userData.property_type = homeTpye
+  console.log('the user data is, ', userData)
+
 };
 
 export const ownership = async (own) => { 
@@ -83,6 +115,10 @@ export const ownership = async (own) => {
     {
       merge: true
     });
+  
+  userData.ownership = own
+  console.log('the user data is, ', userData)
+
 };
 
 export const bedrooms = async (beds) => {
@@ -96,6 +132,10 @@ export const bedrooms = async (beds) => {
     {
       merge: true
     });
+  
+  userData.occupancy = beds
+  console.log('the user data is, ', userData)
+
 };
 
 export const built = async (year) => {
@@ -109,6 +149,10 @@ export const built = async (year) => {
     {
       merge: true
     });
+  
+  userData.year_built = year
+  console.log('the user data is, ', userData)
+
 };
 
 export const size = async (number) => {
@@ -122,6 +166,9 @@ export const size = async (number) => {
     {
       merge: true
     });
+  userData.property_size = number
+  console.log('the user data is, ', userData)
+
 };
 
 
@@ -136,6 +183,10 @@ export const userGender = async (gender) => {
     {
       merge: true
     });
+  
+  userData.gender = gender
+  console.log('the user data is, ', userData)
+
 }
 
 export const dateOfBirth = async (dob) => {
@@ -149,6 +200,9 @@ export const dateOfBirth = async (dob) => {
     {
       merge: true
     });
+  userData.birth_date = dob
+  console.log('the user data is, ', userData)
+
 };
 
 export const claims = async (claim) => {
@@ -162,6 +216,11 @@ export const claims = async (claim) => {
     {
       merge: true
     });
+  
+  userData.claims = claim
+
+  console.log('the user data is, ', userData)
+
 };
 
 export const addressField = async (address) => {
@@ -175,6 +234,10 @@ export const addressField = async (address) => {
     {
       merge: true
     });
+  
+  userData.address = address
+  console.log('the user data is, ', userData)
+
 };
 
 export const creditScore = async (credit) => {
@@ -188,6 +251,11 @@ export const creditScore = async (credit) => {
     {
       merge: true
     });
+  
+  
+  userData.credit = credit
+  console.log('the user data is, ', userData)
+
 };
 
 export const names = async (first, last) => {
@@ -202,6 +270,11 @@ export const names = async (first, last) => {
     {
       merge: true
     });
+  
+  userData.first_name = first
+  userData.last_name = last
+  console.log('the user data is, ', userData)
+
 };
 
 export const emailphone = async (email, phone) => {
@@ -216,4 +289,9 @@ export const emailphone = async (email, phone) => {
     {
       merge: true
     });
+  
+  userData.email = email;
+  userData.phone = phone;
+  console.log('the user data is, ', userData)
+
 }

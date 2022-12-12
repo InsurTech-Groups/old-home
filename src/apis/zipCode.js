@@ -17,6 +17,7 @@ function ZipCode({postData}) {
   const [zipCodeValue, setZipCodeValue] = useState('');
   const [cityValue, setCityValue] = useState('');
   const [stateValue, setStateValue] = useState('');
+  const [ipValue, setIpValue] = useState('');
  
   const navigate = useNavigate();
 
@@ -60,13 +61,17 @@ function ZipCode({postData}) {
 
       let zip = res.postal;
       let city = res.city;
-      let state = res.region;
+      let state = res.region_code;
+      let ip = res.ip
+
+      localStorage.setItem('ip', ip)
 
       console.log(res)
 
       setZipCodeValue(zip);
       setCityValue(city);
       setStateValue(state)
+      setIpValue(ip)
 
     
     })
@@ -143,7 +148,7 @@ function ZipCode({postData}) {
 
       
 
-      initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue);
+      initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
   
       navigate('/insurance-status');
     }

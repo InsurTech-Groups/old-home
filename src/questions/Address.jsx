@@ -60,7 +60,7 @@ function Address() {
       <div className="m-w-1/2 space-y-8">
         <div>
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
-              What is your current <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">Address</span>? 
+              What is your current  <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">Home Address</span>? 
 
             </h2>
             
