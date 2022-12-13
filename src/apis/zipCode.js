@@ -9,6 +9,8 @@ import { db } from '../config/firebaseConfig'
 import { initialFirebaseFormValues } from '../utils/updateFirebase';
 import { v4 as uuidv4 } from 'uuid';
 import { trustedFormURL } from '../utils/updateFirebase';
+import Bugsnag from '@bugsnag/browser';
+
 
 function ZipCode({postData}) {
 
@@ -19,12 +21,15 @@ function ZipCode({postData}) {
   const [cityValue, setCityValue] = useState('');
   const [stateValue, setStateValue] = useState('');
   const [ipValue, setIpValue] = useState('');
+
  
   const navigate = useNavigate();
 
 
 
   useEffect(() => {
+
+
 
     let id = localStorage.getItem('userId');
     let final = localStorage.getItem('done')
@@ -76,6 +81,10 @@ function ZipCode({postData}) {
 
     
     })
+      .catch((err) => {
+        console.log(err)
+        Bugsnag.notify(err)
+      })
 
   }, []);
 
@@ -115,7 +124,9 @@ function ZipCode({postData}) {
         })
         .catch((err) => {
           toast.error("Invalid Zip Code");
+          Bugsnag.notify(err)
         })
+      
     }
 
   }

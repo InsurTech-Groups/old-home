@@ -26,6 +26,8 @@ import Confirm from "./questions/Confirm";
 
 
 export default function App() {
+
+  
   return (
     <div>
       <NavBar />
