@@ -43,7 +43,9 @@ console.log('the url is, ', url)
   const payload = {
   trustedFormURL: url
   }
-  setDoc(docRef, payload)
+  setDoc(docRef, payload  {
+      merge: true
+    })
 
 
 
