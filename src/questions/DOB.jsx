@@ -7,7 +7,7 @@ import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import FadeIn from 'react-fade-in';
-import { dateOfBirth } from "../utils/updateFirebase";
+import { updateDateOfBirth } from "../utils/updateFirebase";
 
 
 
@@ -15,6 +15,9 @@ function ExpiredInsurance() {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [dateofbirth, setdateofbirth] = useState('')
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [year, setYear] = useState('');
 
 
   const navigate = useNavigate();
@@ -55,8 +58,18 @@ function ExpiredInsurance() {
 
     let v = input;
 
+    //01/12/1998
+
 
     let year = v.slice(6, 10);
+    let day = v.slice(0, 2)
+    let month = v.slice(3, 5)
+
+    setYear(year);
+    setMonth(month);
+    setDay(day);
+
+
 
     // make year a number
     year = parseInt(year);
@@ -78,7 +91,7 @@ function ExpiredInsurance() {
       exp = v;
       setIsButtonDisabled(false);
 
-      dateOfBirth(v)
+      updateDateOfBirth(year, month, day)
     }
 
   }
@@ -148,7 +161,7 @@ const dateInputvalidate = (e) => {
       this.value = output;
       setIsButtonDisabled(false)
 
-      setdateofbirth(input)
+      setdateofbirth(year, month, day);
 
       validationExpiration(input);
     });

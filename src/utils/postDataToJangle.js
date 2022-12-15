@@ -6,10 +6,6 @@ import { db } from '../config/firebaseConfig'
 export const postDataToJangle = async () => {
 
 
-  //TODO
-  // 3. change DOB to YYYY/MM/DD
-  // 4. Change policy expiration to YYYY/MM/DD
-  // 5. Zip code doesnt pass
   
   let id = localStorage.getItem('userId');
   const docRef = doc(db, "forms", id);

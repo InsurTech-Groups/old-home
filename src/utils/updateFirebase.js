@@ -89,19 +89,19 @@ export const currentInsurance = async (company) => {
 
 };
 
-export const expiredInsurance = async (expires) => {
+export const updateExpiredInsurance = async (year, day, month) => {
   const id = localStorage.getItem('userId');
   const docRef = doc(db, 'forms', id); 
   
   setDoc(docRef,
     {
-      insurance_expires: expires
+      insurance_expires:  `${year}-${month}-${day}`
     },
     {
       merge: true
     });
   
-  userData.expiration_date = expires
+  userData.expiration_date =  `${year}-${month}-${day}`
   console.log('the user data is, ', userData)
 
 };
@@ -208,18 +208,18 @@ export const userGender = async (gender) => {
 
 }
 
-export const dateOfBirth = async (dob) => {
+export const updateDateOfBirth = async (year, month, day) => {
   const id = localStorage.getItem('userId');
   const docRef = doc(db, 'forms', id); 
   
   setDoc(docRef,
     {
-      date_of_birth: dob
+      date_of_birth: `${year}-${month}-${day}`
     },
     {
       merge: true
     });
-  userData.birth_date = dob
+  userData.birth_date = `${year}-${month}-${day}`
   console.log('the user data is, ', userData)
 
 };

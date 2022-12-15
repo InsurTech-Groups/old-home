@@ -113,21 +113,18 @@ function EmailPhone() {
           data.deliverability === "UNDELIVERABLE" ||
           data.deliverability === "UNKNOWN"
         ) {
-          toast.error("Please enter a valid email address!");
           console.log("email wrong");
 
           setIsButtonDisabled(true);
           return false;
         }
         if (data.is_valid_format === false) {
-          toast.error("Please enter a valid email address!");
 
           console.log("email wrong");
           setIsButtonDisabled(true);
           return false;
         }
         if (data.is_disposable_email === true) {
-          toast.error("Please enter a valid email address!");
           setIsButtonDisabled(true);
           console.log("email wrong");
           return false;
@@ -146,8 +143,7 @@ function EmailPhone() {
 
     return console.log("ended");
 
-    // postDataToJangle();
-    //navigate('/confirm')
+   
   };
 
   const checkPhone = (tel) => {
@@ -159,12 +155,10 @@ function EmailPhone() {
         let data = response.data;
 
         if (data.valid) {
-          toast.error("Please enter a valid phone number");
           setIsButtonDisabled(true);
           return;
         }
         if (data.code !== "US") {
-          toast.error("Please enter a valid phone number");
           setIsButtonDisabled(true);
           return;
         } else {

@@ -15,9 +15,8 @@ function Gender() {
 
 
   let buttons = [
-    { title: 'Male', id: 'Male', value: 'Male', key: 'Male' },
-    { title: 'Female', id: 'Female', value: 'Female', key: 'Female' },
-    { title: 'Non-Binary', id: 'Non-Binary', value: 'Non-Binary', key: 'Non-Binary' },
+    { title: 'Male', id: 'Male', value: 'M', key: 'Male' },
+    { title: 'Female', id: 'Female', value: 'F', key: 'Female' },
   ]
   
   const nextStep = (e) => {
