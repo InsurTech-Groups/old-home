@@ -7,11 +7,9 @@ export const postDataToJangle = async () => {
 
 
   //TODO
-  // 2. change state from full spelling to Abbrevation
   // 3. change DOB to YYYY/MM/DD
   // 4. Change policy expiration to YYYY/MM/DD
   // 5. Zip code doesnt pass
-  // 6. get trusted form working correct
   
   let id = localStorage.getItem('userId');
   const docRef = doc(db, "forms", id);
