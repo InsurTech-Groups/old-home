@@ -221,33 +221,22 @@ function EmailPhone() {
                   />
                 </div>
 
+               
                 <p className="text-white lg:w-1/2 md:w-full sm:w-full">
-                  By clicking "Get My Free Quote" below, I am agreeing to
-                  receive text messages from InsurTech Groups and business
-                  partners. I provide my signature expressly consenting to
-                  recurring contact from Insurtech Groups or its business
-                  partners at the number I provided regarding products or
-                  services via live, automated or prerecorded telephone call,
-                  text message, or email. I understand that my telephone company
-                  may impose charges on me for these contacts, and I am not
-                  required to enter into this agreement as a condition of
-                  purchasing property, goods, or services. I understand that I
-                  can revoke this consent at any time.
-                  <a
+                By clicking, “Get My Free Quote” below, I am providing my consent for Insurtech Groups and its service providers, Aktify and BoomAI, to use automated technology, including calls, texts, prerecorded messages and emails, to contact me about insurance offers at the number and email provided even if my number is on a corporate, state or national do not call list. This consent is not required to make a purchase.  Clicking the button below constitutes your electronic signature. <a
                     className="text-button-purple "
                     href="https://www.insurtechgroups.com/terms-conditions"
                   >
                     {" "}
                     Terms & conditions
-                  </a>{" "}
-                  &{" "}
-                  <a
+                  </a>{" "} and <a
                     href="https://www.insurtechgroups.com/privacy-policy"
                     className="text-button-purple"
                   >
                     Privacy policy
-                  </a>{" "}
-                  apply.
+                  </a>{" "} apply. Msg & data rates may apply. Text “stop” to unsubscribe.
+ 
+
                 </p>
 
                 <button
