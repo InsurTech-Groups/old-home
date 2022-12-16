@@ -52,7 +52,7 @@ function Gender() {
 
 
           
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-4 justify-center">
         {buttons.map((button) => {
                 
           return (

@@ -20,7 +20,7 @@ export default function NavBar(props){
             
             <a
               href="tel:18559071606"
-              className="inline-block rounded-md border border-transparent bg-button-purple py-2 px-4 text-base font-medium text-white hover:bg-indigo-50"
+              className="inline-block rounded-md border border-transparent bg-button-purple py-2 px-4 text-base font-medium text-white hover:bg-indigo-50 hover:text-button-purple"
             >
               	(855) 907-1606
             </a>

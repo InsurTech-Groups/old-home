@@ -25,7 +25,7 @@ export default function ThankYou() {
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
             Congratulations on getting your{" "}
               <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
-                Home Insurnace {' '} 
+                Home Insurance {' '} 
                 </span>
                 Quote
             </h2>
