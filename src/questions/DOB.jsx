@@ -61,13 +61,14 @@ function ExpiredInsurance() {
     //01/12/1998
 
 
-    let year = v.slice(6, 10);
-    let day = v.slice(0, 2)
-    let month = v.slice(3, 5)
+    let vYear = v.slice(6, 10);
+    let vDay = v.slice(0, 2)
+    let vMonth = v.slice(3, 5)
 
-    setYear(year);
-    setMonth(month);
-    setDay(day);
+    setYear(vYear);
+    setDay(vDay);
+    setMonth(vMonth);
+ 
 
 
 

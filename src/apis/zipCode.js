@@ -12,7 +12,7 @@ import { trustedFormURL } from '../utils/updateFirebase';
 import Bugsnag from '@bugsnag/browser';
 
 
-function ZipCode({postData}) {
+function ZipCode() {
 
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -161,6 +161,8 @@ function ZipCode({postData}) {
       
 
       initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
+
+      console.log('zip code value', zipCodeValue)
 
       let url = document.getElementById('trusted_form_url_0').value;
 

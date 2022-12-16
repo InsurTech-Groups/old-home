@@ -45,6 +45,7 @@ export const postDataToJangle = async () => {
           ownership: "",
           occupancy: "",
           year_built: "",
+          zip_code: "",
   
         }
       ],
@@ -89,6 +90,7 @@ export const postDataToJangle = async () => {
     postData.data.properties[0].ownership = data.ownership
     postData.data.properties[0].occupancy = data.bedrooms
     postData.data.properties[0].year_built = data.home_built
+    postData.data.properties[0].zip_code = data.zipcode
 
     postData.data.current_policy.insurance_company = data.current_insurance_company
     postData.data.current_policy.expiration_date = data.insurance_expires
