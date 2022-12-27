@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/forms.css";
 import Banner from "../components/ProgressBar";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import CTA from "../components/CTA";
 import {LinkWithQuery} from '../components/BackButton'
 ;

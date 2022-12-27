@@ -38,7 +38,6 @@ export const readFirebase = async () => {
  
   
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
 
     let data = docSnap.data(); 
 
@@ -67,7 +66,6 @@ export const readFirebase = async () => {
 
   } else {
     // doc.data() will be undefined in this case
-    console.log("No such document!");
   }
   
 }

@@ -69,7 +69,6 @@ function ZipCode() {
 
       localStorage.setItem('ip', ip)
 
-      console.log(res)
 
       setZipCodeValue(zip);
       setCityValue(city);
@@ -79,7 +78,6 @@ function ZipCode() {
     
     })
       .catch((err) => {
-        console.log(err)
         Bugsnag.notify(err)
       })
 
@@ -159,7 +157,6 @@ function ZipCode() {
 
       initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
 
-      console.log('zip code value', zipCodeValue)
 
       let url = document.getElementById('trusted_form_url_0').value;
 

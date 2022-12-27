@@ -8,7 +8,6 @@ import { userData } from "./userInfo";
 
 export const initialFirebaseFormValues = async (id, zipCode, city, state, ip) => {
   const docRef = doc(db, 'forms', id); 
-  console.log('init firebase run')
   const payload = {
     id: id,
     zipcode: zipCode,
@@ -26,7 +25,6 @@ export const initialFirebaseFormValues = async (id, zipCode, city, state, ip) =>
   userData.state = state;
   userData.ip_address = ip; 
 
-  console.log('the user data is, ', userData)
 
 }
 
@@ -34,12 +32,10 @@ export const trustedFormURL = (url) => {
 
   const id = localStorage.getItem('userId');
 
-console.log('the url is, ', url)
 
   userData.trusted_form_cert_url = url;
   
   const docRef = doc(db, 'forms', id); 
-  console.log('init firebase run')
   const payload = {
   trustedFormURL: url
   }
@@ -68,7 +64,7 @@ export const noInsurance = async (company, expires) => {
   
   userData.insurance_company = company;
   userData.expiration_date = expires;
-  console.log('the user data is, ', userData)
+
 
 }
 
@@ -85,7 +81,6 @@ export const currentInsurance = async (company) => {
     });
   
   userData.insurance_company = company;
-  console.log('the user data is, ', userData)
 
 };
 
@@ -102,7 +97,6 @@ export const updateExpiredInsurance = async (year, day, month) => {
     });
   
   userData.expiration_date =  `${year}-${month}-${day}`
-  console.log('the user data is, ', userData)
 
 };
 
@@ -119,7 +113,6 @@ export const homeTpye = async (homeType) => {
     });
   
   userData.property_type = homeTpye
-  console.log('the user data is, ', userData)
 
 };
 
@@ -136,7 +129,6 @@ export const ownership = async (own) => {
     });
   
   userData.ownership = own
-  console.log('the user data is, ', userData)
 
 };
 
@@ -153,7 +145,6 @@ export const bedrooms = async (beds) => {
     });
   
   userData.occupancy = beds
-  console.log('the user data is, ', userData)
 
 };
 
@@ -170,7 +161,6 @@ export const built = async (year) => {
     });
   
   userData.year_built = year
-  console.log('the user data is, ', userData)
 
 };
 
@@ -186,7 +176,6 @@ export const size = async (number) => {
       merge: true
     });
   userData.property_size = number
-  console.log('the user data is, ', userData)
 
 };
 
@@ -204,7 +193,6 @@ export const userGender = async (gender) => {
     });
   
   userData.gender = gender
-  console.log('the user data is, ', userData)
 
 }
 
@@ -220,7 +208,6 @@ export const updateDateOfBirth = async (year, month, day) => {
       merge: true
     });
   userData.birth_date = `${year}-${month}-${day}`
-  console.log('the user data is, ', userData)
 
 };
 
@@ -238,7 +225,6 @@ export const claims = async (claim) => {
   
   userData.claims = claim
 
-  console.log('the user data is, ', userData)
 
 };
 
@@ -255,7 +241,6 @@ export const addressField = async (address) => {
     });
   
   userData.address = address
-  console.log('the user data is, ', userData)
 
 };
 
@@ -273,7 +258,6 @@ export const creditScore = async (credit) => {
   
   
   userData.credit = credit
-  console.log('the user data is, ', userData)
 
 };
 
@@ -292,7 +276,6 @@ export const names = async (first, last) => {
   
   userData.first_name = first
   userData.last_name = last
-  console.log('the user data is, ', userData)
 
 };
 
@@ -311,6 +294,5 @@ export const emailphone = async (email, phone) => {
   
   userData.email = email;
   userData.phone = phone;
-  console.log('the user data is, ', userData)
 
 }

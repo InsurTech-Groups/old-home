@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/forms.css";
 import Banner from "../components/ProgressBar";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-number-input/input";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
@@ -80,18 +80,14 @@ function EmailPhone() {
 
       emailphone(em, ph);
 
-      console.log("checking email");
       checkEmail(em);
-      console.log("email was success, checking phone now");
       checkPhone(phone);
-      console.log("phone was success, posting to jangle now");
 
       localStorage.setItem("done", "yes");
 
       if (isButtonDisabled) {
         return;
       } else {
-        console.log("IM POSTING");
         postDataToJangle();
         navigate("/confirm");
       }
@@ -109,35 +105,29 @@ function EmailPhone() {
           data.deliverability === "UNDELIVERABLE" ||
           data.deliverability === "UNKNOWN"
         ) {
-          console.log("email wrong");
 
           setIsButtonDisabled(true);
           return false;
         }
         if (data.is_valid_format === false) {
 
-          console.log("email wrong");
           setIsButtonDisabled(true);
           return false;
         }
         if (data.is_disposable_email === true) {
           setIsButtonDisabled(true);
-          console.log("email wrong");
           return false;
         } else {
           toast.dismiss();
-          console.log("success");
           toast.clearWaitingQueue();
-          console.log("email right");
 
           // buttonDisabled(false);
         }
       })
       .catch((error) => {
-        console.log(error);
       });
 
-    return console.log("ended");
+   
 
    
   };
@@ -163,10 +153,8 @@ function EmailPhone() {
         }
       })
       .catch((error) => {
-        console.log(error);
       });
 
-    return console.log("phone valid");
   };
   // get todays date
   return (

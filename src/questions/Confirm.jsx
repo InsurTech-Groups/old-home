@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Lottie from 'lottie-react';
 import Sending from "../assets/Confirm.json";
-import { useNavigate } from 'react-router';
+import { useNavigate } from "react-router-dom";
 
 
 const Confirm = () => {

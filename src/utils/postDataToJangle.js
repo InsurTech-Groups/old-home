@@ -66,7 +66,6 @@ export const postDataToJangle = async () => {
 
   
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
 
     let data = docSnap.data();
     postData.meta.originally_created = new Date().getDate;
@@ -97,7 +96,6 @@ export const postDataToJangle = async () => {
   
 
     //post data to url
-    console.log(postData)
     fetch('https://api.jangl.com/v2/home_insurance/capture', {
       method: 'POST',
       headers: {
@@ -116,7 +114,6 @@ export const postDataToJangle = async () => {
     
   } else {
     // doc.data() will be undefined in this case
-    console.log("No such document!");
     toast.error('Looks like you havent completed the form')
   }
   
