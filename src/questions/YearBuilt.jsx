@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import FadeIn from 'react-fade-in';
+;
 import { built } from "../utils/updateFirebase";
 
 
@@ -87,7 +87,7 @@ return
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={46} />
-      <FadeIn>
+      
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
@@ -148,7 +148,7 @@ return
         </div>
       </div>
         <CTA />
-        </FadeIn>
+        
 
     </div>
   );

@@ -7,7 +7,6 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import FadeIn from "react-fade-in";
 import { emailphone } from "../utils/updateFirebase";
 import { postDataToJangle } from "../utils/postDataToJangle";
 import axios from "axios";
@@ -176,7 +175,7 @@ function EmailPhone() {
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={99} />
-      <FadeIn>
+      
         <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
         <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
@@ -259,7 +258,7 @@ function EmailPhone() {
           </div>
         </div>
         <CTA />
-      </FadeIn>
+      
     </div>
   );
 }

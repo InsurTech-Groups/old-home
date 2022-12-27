@@ -5,7 +5,7 @@ import Banner from "../components/ProgressBar";
 import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
-import FadeIn from 'react-fade-in';
+;
 import { toast } from "react-toastify";
 import { size } from "../utils/updateFirebase";
 
@@ -61,7 +61,7 @@ function SquareFootage() {
       
       <div className="bg-dark-purple pb-10">
       <Banner setProgress={53} />
-      <FadeIn>
+      
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
 
@@ -115,7 +115,7 @@ function SquareFootage() {
       </div>
       </div>
         <CTA />
-        </FadeIn>
+        
 
       </div>
       

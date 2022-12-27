@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import FadeIn from 'react-fade-in';
+;
 import { updateExpiredInsurance } from "../utils/updateFirebase";
 
 
@@ -165,7 +165,7 @@ function ExpiredInsurance() {
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={20} />
-      <FadeIn>
+      
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
@@ -215,7 +215,7 @@ function ExpiredInsurance() {
         </div>
       </div>
         <CTA />
-        </FadeIn>
+        
 
     </div>
   );

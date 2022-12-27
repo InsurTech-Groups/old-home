@@ -5,7 +5,7 @@ import Banner from "../components/ProgressBar";
 import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
-import FadeIn from 'react-fade-in';
+;
 import { currentInsurance } from "../utils/updateFirebase";
 
 
@@ -46,7 +46,7 @@ currentInsurance(v)
       
       <div className="bg-dark-purple pb-10">
       <Banner setProgress={13} />
-      <FadeIn>
+      
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
 
@@ -88,7 +88,7 @@ currentInsurance(v)
       </div>
       </div>
         <CTA />
-        </FadeIn>
+        
 
       </div>
       

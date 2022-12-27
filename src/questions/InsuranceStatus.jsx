@@ -5,7 +5,7 @@ import Banner from "../components/ProgressBar";
 import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import {LinkWithQuery} from '../components/BackButton'
-import FadeIn from 'react-fade-in';
+;
 import { noInsurance } from "../utils/updateFirebase";
 
 function InsuranceStatus() {
@@ -46,7 +46,7 @@ function InsuranceStatus() {
     
       
     <div className="bg-dark-purple pb-10">
-      <FadeIn>
+      
       <Banner setProgress={6} />
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
@@ -89,7 +89,7 @@ function InsuranceStatus() {
       </div>
       
         <CTA />
-        </FadeIn>
+        
       </div>
       
   )

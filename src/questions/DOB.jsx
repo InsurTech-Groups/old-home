@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import FadeIn from 'react-fade-in';
+;
 import { updateDateOfBirth } from "../utils/updateFirebase";
 
 
@@ -62,8 +62,8 @@ function ExpiredInsurance() {
 
 
     let vYear = v.slice(6, 10);
-    let vDay = v.slice(0, 2)
-    let vMonth = v.slice(3, 5)
+    let vDay = v.slice(0, 2);
+    let vMonth = v.slice(3, 5);
 
     setYear(vYear);
     setDay(vDay);
@@ -175,7 +175,7 @@ const dateInputvalidate = (e) => {
   return (
     <div className="bg-dark-purple pb-10">
       <Banner setProgress={66} />
-      <FadeIn>
+      
 
             <ToastContainer limit={1} position="bottom-left" theme="colored" />
 
@@ -226,7 +226,7 @@ const dateInputvalidate = (e) => {
         </div>
       </div>
         <CTA />
-        </FadeIn>
+        
 
     </div>
   );
