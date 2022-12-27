@@ -6,7 +6,6 @@ import ZipCode from '../apis/zipCode'
 import FAQ from "../components/faq";
 import { ipAddress } from "../apis/ipCollection";
 import { trustedForm } from "../apis/trustedForm";
-import { trustedFormURL } from "../utils/updateFirebase";
 
 function LandingPage() {
   

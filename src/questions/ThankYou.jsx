@@ -3,7 +3,6 @@ import Lottie from "lottie-react";
 import HomeInsurane from '../assets/HomeInsurance.json';
 import "../styles/forms.css";
 import Agent from '../assets/agent.jpg';
-import { readFirebase } from '../utils/readFireBase';
 
 
 

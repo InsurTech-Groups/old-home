@@ -1,4 +1,3 @@
-import axios, { AxiosHeaders } from "axios";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../config/firebaseConfig'
 

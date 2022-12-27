@@ -15,12 +15,10 @@ function EmailPhone() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [areBothValid, setAreBothValid] = useState(0);
   const navigate = useNavigate();
 
   function editPhoneNumber(e) {
     let phoneNumber = document.getElementById("phone_home").value;
-    let trim = phoneNumber.trim();
 
     if (
       phoneNumber === "" ||
@@ -40,7 +38,6 @@ function EmailPhone() {
 
   function editEmail(e) {
     let em = e.target.value;
-    let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
     if (em === "" || em === null || em === undefined) {
       toast.error("Please enter a valid email");

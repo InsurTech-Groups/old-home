@@ -4,8 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-import {collection, addDoc, onSnapshot} from "firebase/firestore";
-import { db } from '../config/firebaseConfig'
 import { initialFirebaseFormValues } from '../utils/updateFirebase';
 import { v4 as uuidv4 } from 'uuid';
 import { trustedFormURL } from '../utils/updateFirebase';
@@ -16,7 +14,6 @@ function ZipCode() {
 
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const [userId, setUserId] = useState('');
   const [zipCodeValue, setZipCodeValue] = useState('');
   const [cityValue, setCityValue] = useState('');
   const [stateValue, setStateValue] = useState('');
