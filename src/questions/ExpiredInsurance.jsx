@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-;
+
 import { updateExpiredInsurance } from "../utils/updateFirebase";
 
 

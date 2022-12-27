@@ -5,7 +5,7 @@ import Banner from "../components/ProgressBar";
 import { useNavigate } from "react-router";
 import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
-;
+
 import { homeTpye } from "../utils/updateFirebase";
 
 
