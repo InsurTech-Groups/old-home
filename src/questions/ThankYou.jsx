@@ -30,7 +30,7 @@ export default function ThankYou() {
             </h2>
 
             <p className="text-white text-md mx-auto pt-5">
-              An agent will be with you shortly to help you get your quote started.
+              An agent will be with you shortly to get started on your quote!
             </p>
 
             <div class="grid grid-cols-2 gap-2 text-center w-1/2 mx-auto justify-center">
