@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
+import LandingPageVariationTwo from "./pages/LandingPage2";
 import InsuranceStatus from "./questions/InsuranceStatus";
 import CurrentInsurance from "./questions/CurrentInsurance";
 import ExpiredInsurance from "./questions/ExpiredInsurance";
@@ -34,7 +35,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-
+        <Route path='/l2' element={<LandingPageVariationTwo/>}/>
 
         <Route path="/insurance-status" element={<InsuranceStatus />} />
 
