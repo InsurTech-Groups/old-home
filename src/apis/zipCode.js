@@ -158,7 +158,7 @@ function ZipCode() {
       initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
 
 
-      let url = document.getElementById('trusted_form_url_0').value;
+      let url = document.getElementById('xxTrustedFormCertUrl_0').value;
 
        trustedFormURL(url)
   
