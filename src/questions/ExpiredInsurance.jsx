@@ -70,7 +70,7 @@ function ExpiredInsurance() {
 
     toast.clearWaitingQueue();
 
-    if (year < 2022 || year > 2024) {
+    if (year < 2023 || year > 2024) {
       toast.error("Please enter a valid year");
       setIsButtonDisabled(true);
       return;
