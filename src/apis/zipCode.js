@@ -22,32 +22,6 @@ function ZipCode() {
  
   const navigate = useNavigate();
 
-
-
-  useEffect(() => {
-
-
-
-    let id = localStorage.getItem('userId');
-    let final = localStorage.getItem('done')
-
-    if (!id) {
-      localStorage.setItem('userId', uuidv4());
-
-    }
-    if (final === 'yes') {
-
-      toast.success('Thank you for your submission!');
-
-      navigate('/thank-you')
-    }
-    
-  }, [])
-  
-
-
-
-
   useEffect(() => {
 
     const apiKey = process.env.REACT_APP_IPAPI_KEY;
@@ -158,7 +132,7 @@ function ZipCode() {
       initialFirebaseFormValues(id, zipCodeValue, cityValue, stateValue, ipValue);
 
 
-      let url = document.getElementById('xxTrustedFormCertUrl_0').value;
+      let url = document.getElementById('xxTrustedFormToken_0').value;
 
        trustedFormURL(url)
   
