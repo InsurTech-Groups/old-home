@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@themesberg/tailwind-datepicker": "^1.1.0",
     "assert": "^2.0.0",
-    "axios": "^1.2.0",
+    "axios": "^1.4.0",
     "confetti-js": "^0.0.18",
     "date-fns": "^2.29.3",
     "dotenv-webpack": "^8.0.1",
